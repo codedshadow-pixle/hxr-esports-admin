@@ -1582,7 +1582,9 @@
               <div class="admin-field"><label for="memberName">Display name</label><input id="memberName" required maxlength="80" placeholder="Player name"></div>
               <div class="admin-field"><label for="memberRole">Role</label><select id="memberRole" required><option value="Player">Player</option><option value="Substitute">Substitute</option><option value="Coach">Coach</option><option value="Manager">Manager</option><option value="Owner">Owner</option></select></div>
               <div class="admin-field"><label for="memberIgn">HXR IGN</label><input id="memberIgn" maxlength="80" placeholder="HXR PlayerIGN"></div>
+              <div class="admin-field"><label for="memberBgmiUid">BGMI UID</label><input id="memberBgmiUid" inputmode="numeric" maxlength="24" placeholder="In-game numeric UID"></div>
               <div class="admin-field"><label for="memberLevel">BGMI level</label><input id="memberLevel" maxlength="40" placeholder="e.g. Level 65"></div>
+              <div class="admin-field"><label for="memberRank">BGMI rank</label><input id="memberRank" maxlength="40" placeholder="e.g. Crown III / Ace"></div>
               <div class="admin-field full"><label for="memberScreenshot">Profile screenshot (JPG, PNG or WebP, max 5 MB)</label><input id="memberScreenshot" type="file" accept="image/jpeg,image/png,image/webp"></div>
             </div>
             <div class="admin-actions"><button class="admin-btn primary" id="saveMemberBtn" type="submit">Save member</button><button class="admin-btn" id="cancelEditBtn" type="button">Clear form</button><button class="admin-btn danger" id="logoutAdminBtn" type="button">Log out</button></div>
@@ -1712,7 +1714,7 @@
         (management ? '' : '<div class="player-silhouette">HXR</div>') +
         '<h3 class="player-name">' + escapeHTML(member.name) + '</h3>' +
         (management ? '<p>' + escapeHTML(member.name) + ' · Team staff</p>' : '') +
-        '<div class="profile-details"><div class="detail-row"><span>IGN</span><strong>' + escapeHTML(member.ign || 'Not added') + '</strong></div><div class="detail-row"><span>Level</span><strong>' + escapeHTML(member.level || 'Not added') + '</strong></div></div>' + photo + '</article>';
+        '<div class="profile-details"><div class="detail-row"><span>IGN</span><strong>' + escapeHTML(member.ign || 'Not added') + '</strong></div><div class="detail-row"><span>BGMI UID</span><strong>' + escapeHTML(member.bgmi_uid || 'Not added') + '</strong></div><div class="detail-row"><span>Level</span><strong>' + escapeHTML(member.level || 'Not added') + '</strong></div><div class="detail-row"><span>Rank</span><strong>' + escapeHTML(member.rank || 'Not added') + '</strong></div></div>' + photo + '</article>';
     }
     function renderPublicRoster(members) {
       const rosterSection = document.querySelector("#roster .container");
@@ -1789,7 +1791,7 @@
     document.getElementById("refreshMembersBtn").addEventListener("click", () => fetchMembers(false));
     function renderAdminList(members) {
       if (!members.length) { adminMemberList.innerHTML = '<div class="roster-empty">No members yet. Use the form above to add the first member.</div>'; return; }
-      adminMemberList.innerHTML = members.map(m => '<div class="admin-member"><div><strong>' + escapeHTML(m.name) + ' <span style="color:var(--accent)">/ ' + escapeHTML(m.role) + '</span></strong><small>' + escapeHTML(m.ign || 'IGN not set') + ' · ' + escapeHTML(m.level || 'Level not set') + '</small></div><div class="admin-member-actions"><button class="admin-btn" type="button" data-edit="' + escapeHTML(m.id) + '">Edit</button><button class="admin-btn danger" type="button" data-delete="' + escapeHTML(m.id) + '">Remove</button></div></div>').join("");
+      adminMemberList.innerHTML = members.map(m => '<div class="admin-member"><div><strong>' + escapeHTML(m.name) + ' <span style="color:var(--accent)">/ ' + escapeHTML(m.role) + '</span></strong><small>' + escapeHTML(m.ign || 'IGN not set') + ' · UID ' + escapeHTML(m.bgmi_uid || 'not set') + ' · ' + escapeHTML(m.level || 'Level not set') + ' · Rank ' + escapeHTML(m.rank || 'not set') + '</small></div><div class="admin-member-actions"><button class="admin-btn" type="button" data-edit="' + escapeHTML(m.id) + '">Edit</button><button class="admin-btn danger" type="button" data-delete="' + escapeHTML(m.id) + '">Remove</button></div></div>').join("");
     }
     adminMemberList.addEventListener("click", async event => {
       const editButton = event.target.closest("[data-edit]");
@@ -1802,7 +1804,9 @@
         document.getElementById("memberName").value = m.name || "";
         document.getElementById("memberRole").value = m.role;
         document.getElementById("memberIgn").value = m.ign || "";
+        document.getElementById("memberBgmiUid").value = m.bgmi_uid || "";
         document.getElementById("memberLevel").value = m.level || "";
+        document.getElementById("memberRank").value = m.rank || "";
         document.getElementById("editorHeading").textContent = "Edit team member";
         document.getElementById("saveMemberBtn").textContent = "Update member";
         memberForm.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1846,7 +1850,9 @@
           name: document.getElementById("memberName").value.trim(),
           role: document.getElementById("memberRole").value,
           ign: document.getElementById("memberIgn").value.trim(),
+          bgmi_uid: document.getElementById("memberBgmiUid").value.trim(),
           level: document.getElementById("memberLevel").value.trim(),
+          rank: document.getElementById("memberRank").value.trim(),
           screenshot_url: screenshotUrl,
           sort_order: Number(document.getElementById("memberRole").selectedIndex)
         };
