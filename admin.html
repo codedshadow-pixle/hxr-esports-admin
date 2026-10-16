@@ -1,110 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090909">
-<title>HEXORA Admin | HXR</title>
-<style>:root {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#090909" name="theme-color"/>
+  <title>
+   HEXORA Admin | HXR
+  </title>
+  <style>
+   :root {
   --bg:#080808;
   --panel:#121212;
   --line:#2a2a2a;
   --red:#ef233c;
   --text:#f5f5f5;
   --muted:#aaa;
-  --green:#8de4ad
+  --green:#8de4ad;
 }
-
 * {
-  box-sizing:border-box
+  box-sizing:border-box;
 }
-
 body {
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family:Inter,Arial,sans-serif
+  font-family:Inter,Arial,sans-serif;
 }
-
 .wrap {
   width:min(1150px,92%);
-  margin:auto
+  margin:auto;
 }
-
 .top {
   border-bottom:1px solid var(--line);
-  padding:20px 0
+  padding:20px 0;
 }
-
 .brand {
   font-weight:950;
   letter-spacing:2px;
   font-size:20px;
   color:inherit;
-  text-decoration:none
+  text-decoration:none;
 }
-
 .brand span {
-  color:var(--red)
+  color:var(--red);
 }
-
 main {
-  padding:38px 0 70px
+  padding:38px 0 70px;
 }
-
 .eyebrow {
   color:var(--red);
   font-size:11px;
   font-weight:900;
-  letter-spacing:3px
+  letter-spacing:3px;
 }
-
 h1 {
   font-size:clamp(30px,6vw,48px);
-  margin:9px 0 8px
+  margin:9px 0 8px;
 }
-
 h2 {
   margin:0 0 18px;
-  font-size:20px
+  font-size:20px;
 }
-
 .muted {
   color:var(--muted);
   line-height:1.6;
-  font-size:14px
+  font-size:14px;
 }
-
 .panel {
   border:1px solid var(--line);
   background:var(--panel);
   padding:22px;
-  margin-top:22px
+  margin-top:22px;
 }
-
 .formgrid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px
+  gap:14px;
 }
-
 .field {
   display:flex;
   flex-direction:column;
   gap:7px;
-  min-width:0
+  min-width:0;
 }
-
 .field.full {
-  grid-column:1/-1
+  grid-column:1/-1;
 }
-
 label {
   font-size:12px;
   color:#ccc;
-  font-weight:700
+  font-weight:700;
 }
-
 input,select,textarea {
   width:100%;
   background:#080808;
@@ -113,122 +99,102 @@ input,select,textarea {
   padding:12px;
   font:inherit;
   border-radius:0;
-  min-width:0
+  min-width:0;
 }
-
 textarea {
   min-height:90px;
-  resize:vertical
+  resize:vertical;
 }
-
 input:focus,select:focus,textarea:focus {
   outline:1px solid var(--red);
-  border-color:var(--red)
+  border-color:var(--red);
 }
-
 .btn {
   background:var(--red);
   border:1px solid var(--red);
   color:white;
   padding:12px 16px;
   font-weight:800;
-  cursor:pointer
+  cursor:pointer;
 }
-
 .btn.secondary {
   background:transparent;
-  border-color:#444
+  border-color:#444;
 }
-
 .btn.danger {
   background:#240b0f;
-  border-color:#74202a
+  border-color:#74202a;
 }
-
 .btn:disabled {
   opacity:.5;
-  cursor:not-allowed
+  cursor:not-allowed;
 }
-
 .row {
   display:flex;
   gap:10px;
   align-items:center;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
-
 .message {
   font-size:13px;
   color:#ddd;
   line-height:1.5;
   margin-top:12px;
-  overflow-wrap:anywhere
+  overflow-wrap:anywhere;
 }
-
 .message.error {
-  color:#ff8490
+  color:#ff8490;
 }
-
 .message.success {
-  color:var(--green)
+  color:var(--green);
 }
-
 .hidden {
-  display:none!important
+  display:none!important;
 }
-
 .memberlist {
   display:grid;
-  gap:12px
+  gap:12px;
 }
-
 .member {
   border:1px solid #303030;
   padding:15px;
   display:flex;
   gap:15px;
   justify-content:space-between;
-  align-items:center
+  align-items:center;
 }
-
 .member h3 {
   margin:0 0 6px;
-  overflow-wrap:anywhere
+  overflow-wrap:anywhere;
 }
-
 .member p {
   margin:0;
   color:var(--muted);
   font-size:12px;
   line-height:1.5;
-  overflow-wrap:anywhere
+  overflow-wrap:anywhere;
 }
-
 .member-actions {
   display:flex;
   gap:8px;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
-
 .thumb {
   width:68px;
   height:68px;
   object-fit:cover;
   background:#222;
-  flex-shrink:0
+  flex-shrink:0;
 }
-
 .member-main {
   display:flex;
   align-items:center;
   gap:13px;
-  min-width:0
+  min-width:0;
 }
-
 .member-info {
-  min-width:0
+  min-width:0;
 }
-
 .note {
   border-left:3px solid var(--red);
   padding:12px 14px;
@@ -236,868 +202,526 @@ input:focus,select:focus,textarea:focus {
   color:#ddd;
   font-size:12px;
   line-height:1.6;
-  margin-top:18px
+  margin-top:18px;
 }
-
 .tabs {
   display:flex;
   gap:8px;
   flex-wrap:wrap;
-  margin-top:24px
+  margin-top:24px;
 }
-
 .tab {
   background:#111;
   border:1px solid #333;
   color:#ddd;
   padding:12px 16px;
   cursor:pointer;
-  font-weight:800
+  font-weight:800;
 }
-
 .tab.active {
   background:var(--red);
   border-color:var(--red);
-  color:#fff
+  color:#fff;
 }
-
 .stats {
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   gap:12px;
-  margin:18px 0
+  margin:18px 0;
 }
-
 .stat {
   border:1px solid var(--line);
   padding:15px;
-  background:#0b0b0b
+  background:#0b0b0b;
 }
-
 .stat strong {
   font-size:27px;
-  display:block
+  display:block;
 }
-
 .stat span {
   font-size:10px;
   color:var(--muted);
   letter-spacing:1px;
-  text-transform:uppercase
+  text-transform:uppercase;
 }
-
 .toolbar {
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin:18px 0
+  margin:18px 0;
 }
-
 .toolbar input {
   flex:1;
-  min-width:180px
+  min-width:180px;
 }
-
 .table-wrap {
-  overflow:auto
+  overflow:auto;
 }
-
 table {
   width:100%;
   border-collapse:collapse;
-  min-width:850px
+  min-width:850px;
 }
-
 th,td {
   text-align:left;
   padding:12px;
   border-bottom:1px solid #2a2a2a;
   font-size:12px;
-  vertical-align:top
+  vertical-align:top;
 }
-
 th {
   font-size:10px;
   color:var(--muted);
   letter-spacing:1px;
-  text-transform:uppercase
+  text-transform:uppercase;
 }
-
 .status-select {
   min-width:130px;
   padding:8px;
-  font-size:12px
+  font-size:12px;
 }
-
 .app-actions {
   display:flex;
   gap:6px;
-  flex-wrap:wrap
+  flex-wrap:wrap;
 }
-
 .small {
   padding:8px 10px;
-  font-size:10px
+  font-size:10px;
 }
-
 .detail-grid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:10px;
-  margin-top:18px
+  margin-top:18px;
 }
-
 .detail {
   border:1px solid #303030;
   padding:12px;
-  min-width:0
+  min-width:0;
 }
-
 .detail label {
   display:block;
   color:var(--muted);
-  margin-bottom:6px
+  margin-bottom:6px;
 }
-
 .detail div {
   font-size:13px;
   white-space:pre-wrap;
-  overflow-wrap:anywhere
+  overflow-wrap:anywhere;
 }
-
 .footer {
   padding:20px 0 35px;
   color:#777;
-  font-size:11px
+  font-size:11px;
 }
-
-@media(max-width:650px) {
-  .formgrid,.detail-grid {
-  grid-template-columns:1fr
+@media(max-width:650px){
+.formgrid,.detail-grid {
+  grid-template-columns:1fr;
 }
-
 .field.full {
-  grid-column:auto
+  grid-column:auto;
 }
-
 .panel {
-  padding:16px
+  padding:16px;
 }
-
 .member {
   align-items:flex-start;
-  flex-direction:column
+  flex-direction:column;
 }
-
 .member-actions {
-  width:100%
+  width:100%;
 }
-
 .member-actions button {
-  flex:1
+  flex:1;
 }
-
 .stats {
-  grid-template-columns:repeat(2,minmax(0,1fr))
+  grid-template-columns:repeat(2,minmax(0,1fr));
 }
-
 .tab {
-  flex:1
+  flex:1;
 }
-
 .top {
-  padding:17px 0
-}
-
-
-}</style>
-</head>
-<body>
-<header class="top">
-<div class="wrap">
-<a class="brand" href="index.html">HEXORA <span>ADMIN</span>
-</a>
-</div>
-</header>
-<main class="wrap">
-<div class="eyebrow">PRIVATE DASHBOARD · HXR</div>
-<h1>HXR Control Panel<span style="color:var(--red)">.</span>
-</h1>
-<p class="muted">Manage your team roster and review recruitment applications in one place.</p>
-<section class="panel" id="loginPanel">
-<h2>Admin sign in</h2>
-<form id="loginForm" class="formgrid">
-<div class="field">
-<label for="email">Email</label>
-<input id="email" type="email" autocomplete="username" required placeholder="Admin email">
-</div>
-<div class="field">
-<label for="password">Password</label>
-<input id="password" type="password" autocomplete="current-password" required placeholder="Password">
-</div>
-<div class="field full">
-<div class="row">
-<button class="btn" id="loginBtn" type="submit">SIGN IN</button>
-</div>
-<div class="message" id="loginMessage" aria-live="polite">
-</div>
-</div>
-</form>
-</section>
-<div id="dashboard" class="hidden">
-<div class="row" style="justify-content:space-between;margin-top:24px">
-<div class="tabs" style="margin-top:0">
-<button class="tab active" id="rosterTab" type="button">TEAM ROSTER</button>
-<button class="tab" id="applicationsTab" type="button">RECRUITMENT APPLICATIONS</button>
-</div>
-<button class="btn secondary" id="signOutBtn" type="button">SIGN OUT</button>
-</div>
-<div id="rosterSection">
-<section class="panel">
-<div class="row" style="justify-content:space-between">
-<h2 id="formTitle">Add a player</h2>
-</div>
-<form id="memberForm" class="formgrid">
-<input id="memberId" type="hidden">
-<div class="field">
-<label for="name">Player name *</label>
-<input id="name" required maxlength="100" placeholder="Real/display name">
-</div>
-<div class="field">
-<label for="ign">In-game name (IGN) *</label>
-<input id="ign" required maxlength="100" placeholder="BGMI name">
-</div>
-<div class="field">
-<label for="role">Role</label>
-<select id="role">
-<option>Player</option>
-<option>IGL</option>
-<option>Substitute</option>
-<option>Coach</option>
-<option>Manager</option>
-<option>Owner</option>
-</select>
-</div>
-<div class="field">
-<label for="level">Level</label>
-<input id="level" maxlength="30" placeholder="e.g. 50">
-</div>
-<div class="field">
-<label for="bgmi_uid">BGMI UID</label>
-<input id="bgmi_uid" maxlength="40" placeholder="In-game UID">
-</div>
-<div class="field">
-<label for="rank">Current rank</label>
-<input id="rank" maxlength="60" placeholder="e.g. Ace Master">
-</div>
-<div class="field">
-<label for="sort_order">Display order</label>
-<input id="sort_order" type="number" value="0" min="0" step="1">
-</div>
-<div class="field">
-<label for="screenshot">Player screenshot (optional)</label>
-<input id="screenshot" type="file" accept="image/png,image/jpeg,image/webp">
-</div>
-<div class="field full">
-<div class="row">
-<button class="btn" id="saveBtn" type="submit">SAVE PLAYER</button>
-<button class="btn secondary" id="cancelEditBtn" type="button">CLEAR FORM</button>
-</div>
-<div class="message" id="formMessage" aria-live="polite">
-</div>
-</div>
-</form>
-<div class="note">Security: this page uses the Supabase publishable key and Auth. Keep Row Level Security enabled. Never put a service_role key in this file. Screenshot uploads need the bucket policies to permit the signed-in admin.</div>
-</section>
-<section class="panel">
-<div class="row" style="justify-content:space-between">
-<h2>Current roster</h2>
-<button class="btn secondary" id="refreshRosterBtn" type="button">REFRESH</button>
-</div>
-<div class="memberlist" id="memberList">
-<p class="muted">Loading…</p>
-</div>
-<div class="message" id="listMessage" aria-live="polite">
-</div>
-</section>
-</div>
-<div id="applicationsSection" class="hidden">
-<section class="panel">
-<div class="row" style="justify-content:space-between">
-<div>
-<h2 style="margin-bottom:5px">Recruitment Applications</h2>
-<p class="muted" style="margin:0">Review Player, Content Creator and Support Staff applications.</p>
-</div>
-<button class="btn secondary" id="refreshApplicationsBtn" type="button">REFRESH</button>
-</div>
-<div class="stats">
-<div class="stat">
-<strong id="totalCount">0</strong>
-<span>Total</span>
-</div>
-<div class="stat">
-<strong id="newCount">0</strong>
-<span>New</span>
-</div>
-<div class="stat">
-<strong id="reviewCount">0</strong>
-<span>Reviewing</span>
-</div>
-<div class="stat">
-<strong id="shortCount">0</strong>
-<span>Shortlisted</span>
-</div>
-</div>
-<div class="toolbar">
-<input id="appSearch" placeholder="Search name, IGN, role or email">
-<select id="statusFilter">
-<option value="All">All statuses</option>
-<option>New</option>
-<option>Reviewing</option>
-<option>Shortlisted</option>
-<option>Accepted</option>
-<option>Rejected</option>
-</select>
-<select id="roleFilter">
-<option value="All">All categories</option>
-<option>Player</option>
-<option>Content Creator</option>
-<option>Support Staff</option>
-</select>
-</div>
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Applicant</th>
-<th>Category</th>
-<th>Experience</th>
-<th>Submitted</th>
-<th>Status</th>
-<th>Actions</th>
-</tr>
-</thead>
-<tbody id="applicationsBody">
-<tr>
-<td colspan="6">Applications not loaded yet.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="message" id="applicationsMessage" aria-live="polite">
-</div>
-</section>
-<section class="panel hidden" id="applicationDetail">
-<div class="row" style="justify-content:space-between">
-<div>
-<h2 id="detailTitle">Application details</h2>
-<p class="muted" id="detailSubtitle" style="margin:0">
-</p>
-</div>
-<button class="btn secondary" id="closeDetailBtn" type="button">CLOSE</button>
-</div>
-<div class="detail-grid" id="detailGrid">
-</div>
-<div class="field" style="margin-top:18px">
-<label for="adminNotes">Private admin notes (optional)</label>
-<textarea id="adminNotes" maxlength="2000" placeholder="Internal notes for your team">
-</textarea>
-</div>
-<div class="row">
-<button class="btn" id="saveNotesBtn" type="button">SAVE NOTES</button>
-<button class="btn danger" id="deleteApplicationBtn" type="button">DELETE APPLICATION</button>
-</div>
-<div class="message" id="detailMessage" aria-live="polite">
-</div>
-</section>
-</div>
-</div>
-</main>
-<footer class="wrap footer">HEXORA Esports · Keep applicant information private.</footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
-</script>
-<script>const SUPABASE_URL='https://sitmoiydrwcgvrydjhja.supabase.co';
-  const SUPABASE_KEY='sb_publishable_7eIOZi6mN8c5dH9PJclvaw_Cav6Z8gt';
-  const ADMIN_UID='3316cc18-b2af-49ad-b050-bc40aa43280c';
-  const BUCKET='hxr-player-screenshots';
-  const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
-  const $=id=>document.getElementById(id);
-  let roster=[],applications=[],selectedApplication=null;
-  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>( {
-  '&':'&amp;
-  ','<':'&lt;
-  ','>':'&gt;
-  ','"':'&quot;
-  ',"'":'&#39;
-  '
-}
-[c]));
-  function msg(id,text,type='') {
-  const e=$(id);
-  e.textContent=text;
-  e.className='message '+type;
-}
-function authorized(user) {
-  return !!user&&user.id===ADMIN_UID;
-}
-function showLogin(text='') {
-  $('loginPanel').classList.remove('hidden');
-  $('dashboard').classList.add('hidden');
-  if(text)msg('loginMessage',text,'error');
-}
-async function restoreSession() {
-  const {
-  data,error
-}
-=await db.auth.getSession();
-  if(error) {
-  showLogin(error.message);
-  return;
-}
-const user=data.session?.user;
-  if(authorized(user)) {
-  $('loginPanel').classList.add('hidden');
-  $('dashboard').classList.remove('hidden');
-  await loadMembers();
-}
-else {
-  if(user)await db.auth.signOut();
-  showLogin(user?'This account is not authorized as the HEXORA admin.':'');
-}
-
-}
-$('loginForm').addEventListener('submit',async e=> {
-  e.preventDefault();
-  $('loginBtn').disabled=true;
-  msg('loginMessage','Signing in…');
-  try {
-  const {
-  data,error
-}
-=await db.auth.signInWithPassword( {
-  email:$('email').value.trim(),password:$('password').value
-}
-);
-  if(error)throw error;
-  if(!authorized(data.user)) {
-  await db.auth.signOut();
-  throw new Error('This account is not authorized as the HEXORA admin.');
-}
-$('loginPanel').classList.add('hidden');
-  $('dashboard').classList.remove('hidden');
-  msg('loginMessage','Signed in successfully.','success');
-  await loadMembers();
-}
-catch(err) {
-  msg('loginMessage',err.message||'Sign in failed.','error');
-}
-finally {
-  $('loginBtn').disabled=false;
-}
-
-}
-);
-  $('signOutBtn').addEventListener('click',async()=> {
-  await db.auth.signOut();
-  roster=[];
-  applications=[];
-  selectedApplication=null;
-  showLogin('You have signed out.');
-}
-);
-  db.auth.onAuthStateChange((_event,session)=> {
-  if(!session) {
-  $('dashboard').classList.add('hidden');
-  $('loginPanel').classList.remove('hidden');
-}
-
-}
-);
-  function switchTab(which) {
-  const apps=which==='apps';
-  $('rosterSection').classList.toggle('hidden',apps);
-  $('applicationsSection').classList.toggle('hidden',!apps);
-  $('rosterTab').classList.toggle('active',!apps);
-  $('applicationsTab').classList.toggle('active',apps);
-  if(apps)loadApplications();
-}
-$('rosterTab').addEventListener('click',()=>switchTab('roster'));
-  $('applicationsTab').addEventListener('click',()=>switchTab('apps'));
-  async function loadMembers() {
-  $('memberList').innerHTML='<p class="muted">Loading…</p>';
-  const {
-  data,error
-}
-=await db.from('team_members').select('*').order('sort_order', {
-  ascending:true
-}
-).order('created_at', {
-  ascending:true
-}
-);
-  if(error) {
-  $('memberList').innerHTML='';
-  msg('listMessage','Could not load roster: '+error.message,'error');
-  return;
-}
-roster=data||[];
-  renderMembers();
-  msg('listMessage',`$ {
-  roster.length
-}
-roster member(s) loaded.`,'success');
-}
-function renderMembers() {
-  if(!roster.length) {
-  $('memberList').innerHTML='<p class="muted">No players added yet.</p>';
-  return;
-}
-$('memberList').innerHTML=roster.map(m=>`<article class="member"><div class="member-main">$ {
-  m.screenshot_url?`<img class="thumb" src="$ {
-  esc(m.screenshot_url)
-}
-" alt="Player screenshot">`:''
-}
-<div class="member-info"><h3>$ {
-  esc(m.ign||m.name)
-}
-</h3><p>$ {
-  esc(m.name)
-}
-· $ {
-  esc(m.role||'Player')
-}
-<br>UID: $ {
-  esc(m.bgmi_uid||'—')
-}
-· Rank: $ {
-  esc(m.rank||'—')
-}
-· Level: $ {
-  esc(m.level||'—')
-}
-</p></div></div><div class="member-actions"><button class="btn secondary" data-edit="$ {
-  esc(m.id)
-}
-">EDIT</button><button class="btn danger" data-delete="$ {
-  esc(m.id)
-}
-">DELETE</button></div></article>`).join('');
-  $('memberList').querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editMember(roster.find(m=>String(m.id)===b.dataset.edit))));
-  $('memberList').querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteMember(roster.find(m=>String(m.id)===b.dataset.delete))));
-}
-function editMember(m) {
-  if(!m)return;
-  $('memberId').value=m.id;
-  $('name').value=m.name||'';
-  $('ign').value=m.ign||'';
-  $('role').value=m.role||'Player';
-  $('level').value=m.level||'';
-  $('bgmi_uid').value=m.bgmi_uid||'';
-  $('rank').value=m.rank||'';
-  $('sort_order').value=m.sort_order??0;
-  $('screenshot').value='';
-  $('formTitle').textContent='Edit player';
-  $('saveBtn').textContent='UPDATE PLAYER';
-  msg('formMessage','Editing '+(m.ign||m.name)+'.');
-  window.scrollTo( {
-  top:0,behavior:'smooth'
-}
-);
-}
-function clearForm() {
-  $('memberForm').reset();
-  $('memberId').value='';
-  $('sort_order').value='0';
-  $('formTitle').textContent='Add a player';
-  $('saveBtn').textContent='SAVE PLAYER';
-  msg('formMessage','');
-}
-$('cancelEditBtn').addEventListener('click',clearForm);
-  $('refreshRosterBtn').addEventListener('click',loadMembers);
-  async function uploadScreenshot(file) {
-  if(!file)return null;
-  if(file.size>5*1024*1024)throw new Error('Please choose an image under 5 MB.');
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Use JPG, PNG, or WEBP image format.');
-  const ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg';
-  const path=`$ {
-  ADMIN_UID
-}
-/$ {
-  Date.now()
-}
--$ {
-  crypto.randomUUID()
-}
-.$ {
-  ext
-}
-`;
-  const {
-  error
-}
-=await db.storage.from(BUCKET).upload(path,file, {
-  upsert:false,contentType:file.type
-}
-);
-  if(error)throw error;
-  return db.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
-}
-$('memberForm').addEventListener('submit',async e=> {
-  e.preventDefault();
-  $('saveBtn').disabled=true;
-  msg('formMessage','Saving player…');
-  try {
-  const {
-  data: {
-  user
-}
-
-}
-=await db.auth.getUser();
-  if(!authorized(user))throw new Error('Please sign in with the authorized admin account.');
-  const id=$('memberId').value;
-  const payload= {
-  name:$('name').value.trim(),ign:$('ign').value.trim(),role:$('role').value,level:$('level').value.trim()||null,bgmi_uid:$('bgmi_uid').value.trim()||null,rank:$('rank').value.trim()||null,sort_order:Number($('sort_order').value)||0
-}
-;
-  const file=$('screenshot').files[0];
-  if(file)payload.screenshot_url=await uploadScreenshot(file);
-  const result=id?await db.from('team_members').update(payload).eq('id',id):await db.from('team_members').insert(payload);
-  if(result.error)throw result.error;
-  msg('formMessage',id?'Player updated.':'Player added.','success');
-  clearForm();
-  await loadMembers();
-}
-catch(err) {
-  msg('formMessage',err.message||'Could not save player. Check table and storage policies.','error');
-}
-finally {
-  $('saveBtn').disabled=false;
-}
-
-}
-);
-  async function deleteMember(m) {
-  if(!m||!confirm(`Delete $ {
-  m.ign||m.name
-}
-? This cannot be undone.`))return;
-  msg('listMessage','Deleting…');
-  const {
-  error
-}
-=await db.from('team_members').delete().eq('id',m.id);
-  if(error) {
-  msg('listMessage',error.message,'error');
-  return;
-}
-if(m.screenshot_url) {
-  const marker='/storage/v1/object/public/'+BUCKET+'/';
-  const pos=m.screenshot_url.indexOf(marker);
-  if(pos>=0) {
-  const path=decodeURIComponent(m.screenshot_url.slice(pos+marker.length));
-  await db.storage.from(BUCKET).remove([path]);
-}
-
-}
-msg('listMessage','Roster member deleted.','success');
-  await loadMembers();
-}
-const appFields=[['Full name','full_name'],['Email','contact_email'],['Discord / contact','discord'],['Age','age'],['Category','category'],['BGMI IGN','ign'],['BGMI UID','bgmi_uid'],['Current rank','current_rank'],['KD','kd'],['Preferred player role','player_role'],['Experience','experience'],['Platform','platform'],['Audience size','audience'],['Content type','content_type'],['Staff role','staff_role'],['Availability','availability'],['Social / portfolio link','social_link'],['Why join HEXORA','why_join'],['Submitted','created_at']];
-  async function loadApplications() {
-  msg('applicationsMessage','Loading applications…');
-  const {
-  data,error
-}
-=await db.from('recruitment_applications').select('*').order('created_at', {
-  ascending:false
-}
-).limit(500);
-  if(error) {
-  applications=[];
-  renderApplications();
-  msg('applicationsMessage','Could not load applications. Check the recruitment table and admin RLS policy. '+error.message,'error');
-  return;
-}
-applications=data||[];
-  renderApplications();
-  msg('applicationsMessage',`$ {
-  applications.length
-}
-application(s) loaded.`,'success');
-}
-function renderApplications() {
-  const total=applications.length;
-  $('totalCount').textContent=total;
-  $('newCount').textContent=applications.filter(a=>a.status==='New').length;
-  $('reviewCount').textContent=applications.filter(a=>a.status==='Reviewing').length;
-  $('shortCount').textContent=applications.filter(a=>a.status==='Shortlisted').length;
-  const q=$('appSearch').value.trim().toLowerCase(),st=$('statusFilter').value,role=$('roleFilter').value;
-  const rows=applications.filter(a=>(st==='All'||(a.status||'New')===st)&&(role==='All'||a.category===role)&&(!q||[a.full_name,a.contact_email,a.ign,a.category,a.discord].some(v=>String(v||'').toLowerCase().includes(q))));
-  if(!rows.length) {
-  $('applicationsBody').innerHTML='<tr><td colspan="6">No applications match this filter.</td></tr>';
-  return;
-}
-$('applicationsBody').innerHTML=rows.map(a=>`<tr><td><strong>$ {
-  esc(a.full_name)
-}
-</strong><span class="sub">$ {
-  esc(a.contact_email)
-}
-</span><span class="sub">$ {
-  esc(a.ign||a.discord||'')
-}
-</span></td><td>$ {
-  esc(a.category)
-}
-</td><td>$ {
-  esc(a.experience||'—')
-}
-</td><td>$ {
-  esc(a.created_at?new Date(a.created_at).toLocaleString():'—')
-}
-</td><td><select class="status-select" data-status="$ {
-  esc(a.id)
-}
-">$ {
-  ['New','Reviewing','Shortlisted','Accepted','Rejected'].map(s=>`<option $ {
-  ((a.status||'New')===s)?'selected':''
-}
->$ {
-  s
-}
-</option>`).join('')
-}
-</select></td><td><div class="app-actions"><button class="btn secondary small" data-view="$ {
-  esc(a.id)
-}
-">VIEW</button><button class="btn small" data-accept="$ {
-  esc(a.id)
-}
-">CONFIRM</button><button class="btn danger small" data-reject="$ {
-  esc(a.id)
-}
-">REJECT</button><button class="btn danger small" data-app-delete="$ {
-  esc(a.id)
-}
-">DELETE</button></div></td></tr>`).join('');
-  $('applicationsBody').querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>updateApplicationStatus(s.dataset.status,s.value)));
-  $('applicationsBody').querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>viewApplication(applications.find(a=>String(a.id)===b.dataset.view))));
-  $('applicationsBody').querySelectorAll('[data-accept]').forEach(b=>b.addEventListener('click',()=> {
-  const a=applications.find(x=>String(x.id)===b.dataset.accept);
-  if(a&&confirm(`Confirm $ {
-  a.full_name||'this applicant'
-}
-?`))updateApplicationStatus(a.id,'Accepted');
-}
-));
-  $('applicationsBody').querySelectorAll('[data-reject]').forEach(b=>b.addEventListener('click',()=> {
-  const a=applications.find(x=>String(x.id)===b.dataset.reject);
-  if(a&&confirm(`Reject $ {
-  a.full_name||'this applicant'
-}
-?`))updateApplicationStatus(a.id,'Rejected');
-}
-));
-  $('applicationsBody').querySelectorAll('[data-app-delete]').forEach(b=>b.addEventListener('click',()=>deleteApplication(applications.find(a=>String(a.id)===b.dataset.appDelete))));
-}
-$('appSearch').addEventListener('input',renderApplications);
-  $('statusFilter').addEventListener('change',renderApplications);
-  $('roleFilter').addEventListener('change',renderApplications);
-  $('refreshApplicationsBtn').addEventListener('click',loadApplications);
-  async function updateApplicationStatus(id,status) {
-  msg('applicationsMessage','Updating application status…');
-  const {
-  error
-}
-=await db.from('recruitment_applications').update( {
-  status
-}
-).eq('id',id);
-  if(error) {
-  msg('applicationsMessage','Status update failed: '+error.message,'error');
-  await loadApplications();
-  return;
-}
-const a=applications.find(x=>String(x.id)===String(id));
-  if(a)a.status=status;
-  renderApplications();
-  msg('applicationsMessage','Application status updated.','success');
-  if(selectedApplication&&String(selectedApplication.id)===String(id))selectedApplication.status=status;
-}
-function viewApplication(a) {
-  if(!a)return;
-  selectedApplication=a;
-  $('applicationDetail').classList.remove('hidden');
-  $('detailTitle').textContent=a.full_name||'Application details';
-  $('detailSubtitle').textContent=(a.category||'Application')+' · '+(a.contact_email||'No email');
-  $('detailGrid').innerHTML=appFields.map(([label,key])=>`<div class="detail"><label>$ {
-  esc(label)
-}
-</label><div>$ {
-  key==='created_at'?esc(a[key]?new Date(a[key]).toLocaleString():'—'):key==='social_link'&&a[key]?`<a href="$ {
-  esc(a[key])
-}
-" target="_blank" rel="noopener noreferrer" style="color:#ff6b7a">$ {
-  esc(a[key])
-}
-</a>`:esc(a[key]||'—')
-}
-</div></div>`).join('')+`<div class="detail"><label>Current status</label><div>$ {
-  esc(a.status||'New')
-}
-</div></div>`;
-  $('adminNotes').value=a.admin_notes||'';
-  msg('detailMessage','');
-  $('applicationDetail').scrollIntoView( {
-  behavior:'smooth',block:'start'
-}
-);
-}
-$('closeDetailBtn').addEventListener('click',()=> {
-  $('applicationDetail').classList.add('hidden');
-  selectedApplication=null;
-}
-);
-  $('saveNotesBtn').addEventListener('click',async()=> {
-  if(!selectedApplication)return;
-  const {
-  error
-}
-=await db.from('recruitment_applications').update( {
-  admin_notes:$('adminNotes').value.trim()||null
-}
-).eq('id',selectedApplication.id);
-  if(error) {
-  msg('detailMessage','Could not save notes. Run the SQL update that adds admin_notes, or remove notes feature. '+error.message,'error');
-  return;
-}
-selectedApplication.admin_notes=$('adminNotes').value.trim();
-  msg('detailMessage','Private notes saved.','success');
-}
-);
-  async function deleteApplication(a) {
-  if(!a||!confirm(`Delete the application from $ {
-  a.full_name||'this applicant'
-}
-? This cannot be undone.`))return;
-  const {
-  error
-}
-=await db.from('recruitment_applications').delete().eq('id',a.id);
-  if(error) {
-  msg('applicationsMessage','Delete failed: '+error.message,'error');
-  return;
-}
-if(selectedApplication&&String(selectedApplication.id)===String(a.id)) {
-  $('applicationDetail').classList.add('hidden');
-  selectedApplication=null;
-}
-msg('applicationsMessage','Application deleted.','success');
-  await loadApplications();
-}
-checkSession();
+  padding:17px 0;
+}
+}
+  </style>
+ </head>
+ <body>
+  <header class="top">
+   <div class="wrap">
+    <a class="brand" href="index.html">
+     HEXORA
+     <span>
+      ADMIN
+     </span>
+    </a>
+   </div>
+  </header>
+  <main class="wrap">
+   <div class="eyebrow">
+    PRIVATE DASHBOARD · HXR
+   </div>
+   <h1>
+    HXR Control Panel
+    <span style="color:var(--red)">
+     .
+    </span>
+   </h1>
+   <p class="muted">
+    Manage your team roster and review recruitment applications in one place.
+   </p>
+   <section class="panel" id="loginPanel">
+    <h2>
+     Admin sign in
+    </h2>
+    <form class="formgrid" id="loginForm">
+     <div class="field">
+      <label for="email">
+       Email
+      </label>
+      <input autocomplete="username" id="email" placeholder="Admin email" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="password">
+       Password
+      </label>
+      <input autocomplete="current-password" id="password" placeholder="Password" required="" type="password"/>
+     </div>
+     <div class="field full">
+      <div class="row">
+       <button class="btn" id="loginBtn" type="submit">
+        SIGN IN
+       </button>
+      </div>
+      <div aria-live="polite" class="message" id="loginMessage">
+      </div>
+     </div>
+    </form>
+   </section>
+   <div class="hidden" id="dashboard">
+    <div class="row" style="justify-content:space-between;margin-top:24px">
+     <div class="tabs" style="margin-top:0">
+      <button class="tab active" id="rosterTab" type="button">
+       TEAM ROSTER
+      </button>
+      <button class="tab" id="applicationsTab" type="button">
+       RECRUITMENT APPLICATIONS
+      </button>
+     </div>
+     <button class="btn secondary" id="signOutBtn" type="button">
+      SIGN OUT
+     </button>
+    </div>
+    <div id="rosterSection">
+     <section class="panel">
+      <div class="row" style="justify-content:space-between">
+       <h2 id="formTitle">
+        Add a player
+       </h2>
+      </div>
+      <form class="formgrid" id="memberForm">
+       <input id="memberId" type="hidden"/>
+       <div class="field">
+        <label for="name">
+         Player name *
+        </label>
+        <input id="name" maxlength="100" placeholder="Real/display name" required=""/>
+       </div>
+       <div class="field">
+        <label for="ign">
+         In-game name (IGN) *
+        </label>
+        <input id="ign" maxlength="100" placeholder="BGMI name" required=""/>
+       </div>
+       <div class="field">
+        <label for="role">
+         Role
+        </label>
+        <select id="role">
+         <option>
+          Player
+         </option>
+         <option>
+          IGL
+         </option>
+         <option>
+          Substitute
+         </option>
+         <option>
+          Coach
+         </option>
+         <option>
+          Manager
+         </option>
+         <option>
+          Owner
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="level">
+         Level
+        </label>
+        <input id="level" maxlength="30" placeholder="e.g. 50"/>
+       </div>
+       <div class="field">
+        <label for="bgmi_uid">
+         BGMI UID
+        </label>
+        <input id="bgmi_uid" maxlength="40" placeholder="In-game UID"/>
+       </div>
+       <div class="field">
+        <label for="rank">
+         Current rank
+        </label>
+        <input id="rank" maxlength="60" placeholder="e.g. Ace Master"/>
+       </div>
+       <div class="field">
+        <label for="sort_order">
+         Display order
+        </label>
+        <input id="sort_order" min="0" step="1" type="number" value="0"/>
+       </div>
+       <div class="field">
+        <label for="screenshot">
+         Player screenshot (optional)
+        </label>
+        <input accept="image/png,image/jpeg,image/webp" id="screenshot" type="file"/>
+       </div>
+       <div class="field full">
+        <div class="row">
+         <button class="btn" id="saveBtn" type="submit">
+          SAVE PLAYER
+         </button>
+         <button class="btn secondary" id="cancelEditBtn" type="button">
+          CLEAR FORM
+         </button>
+        </div>
+        <div aria-live="polite" class="message" id="formMessage">
+        </div>
+       </div>
+      </form>
+      <div class="note">
+       Security: this page uses the Supabase publishable key and Auth. Keep Row Level Security enabled. Never put a service_role key in this file. Screenshot uploads need the bucket policies to permit the signed-in admin.
+      </div>
+     </section>
+     <section class="panel">
+      <div class="row" style="justify-content:space-between">
+       <h2>
+        Current roster
+       </h2>
+       <button class="btn secondary" id="refreshRosterBtn" type="button">
+        REFRESH
+       </button>
+      </div>
+      <div class="memberlist" id="memberList">
+       <p class="muted">
+        Loading…
+       </p>
+      </div>
+      <div aria-live="polite" class="message" id="listMessage">
+      </div>
+     </section>
+    </div>
+    <div class="hidden" id="applicationsSection">
+     <section class="panel">
+      <div class="row" style="justify-content:space-between">
+       <div>
+        <h2 style="margin-bottom:5px">
+         Recruitment Applications
+        </h2>
+        <p class="muted" style="margin:0">
+         Review Player, Content Creator and Support Staff applications.
+        </p>
+       </div>
+       <button class="btn secondary" id="refreshApplicationsBtn" type="button">
+        REFRESH
+       </button>
+      </div>
+      <div class="stats">
+       <div class="stat">
+        <strong id="totalCount">
+         0
+        </strong>
+        <span>
+         Total
+        </span>
+       </div>
+       <div class="stat">
+        <strong id="newCount">
+         0
+        </strong>
+        <span>
+         New
+        </span>
+       </div>
+       <div class="stat">
+        <strong id="reviewCount">
+         0
+        </strong>
+        <span>
+         Reviewing
+        </span>
+       </div>
+       <div class="stat">
+        <strong id="shortCount">
+         0
+        </strong>
+        <span>
+         Shortlisted
+        </span>
+       </div>
+      </div>
+      <div class="toolbar">
+       <input id="appSearch" placeholder="Search name, IGN, role or email"/>
+       <select id="statusFilter">
+        <option value="All">
+         All statuses
+        </option>
+        <option>
+         New
+        </option>
+        <option>
+         Reviewing
+        </option>
+        <option>
+         Shortlisted
+        </option>
+        <option>
+         Accepted
+        </option>
+        <option>
+         Rejected
+        </option>
+       </select>
+       <select id="roleFilter">
+        <option value="All">
+         All categories
+        </option>
+        <option>
+         Player
+        </option>
+        <option>
+         Content Creator
+        </option>
+        <option>
+         Support Staff
+        </option>
+       </select>
+      </div>
+      <div class="table-wrap">
+       <table>
+        <thead>
+         <tr>
+          <th>
+           Applicant
+          </th>
+          <th>
+           Category
+          </th>
+          <th>
+           Experience
+          </th>
+          <th>
+           Submitted
+          </th>
+          <th>
+           Status
+          </th>
+          <th>
+           Actions
+          </th>
+         </tr>
+        </thead>
+        <tbody id="applicationsBody">
+         <tr>
+          <td colspan="6">
+           Applications not loaded yet.
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div aria-live="polite" class="message" id="applicationsMessage">
+      </div>
+     </section>
+     <section class="panel hidden" id="applicationDetail">
+      <div class="row" style="justify-content:space-between">
+       <div>
+        <h2 id="detailTitle">
+         Application details
+        </h2>
+        <p class="muted" id="detailSubtitle" style="margin:0">
+        </p>
+       </div>
+       <button class="btn secondary" id="closeDetailBtn" type="button">
+        CLOSE
+       </button>
+      </div>
+      <div class="detail-grid" id="detailGrid">
+      </div>
+      <div class="field" style="margin-top:18px">
+       <label for="adminNotes">
+        Private admin notes (optional)
+       </label>
+       <textarea id="adminNotes" maxlength="2000" placeholder="Internal notes for your team"></textarea>
+      </div>
+      <div class="row">
+       <button class="btn" id="saveNotesBtn" type="button">
+        SAVE NOTES
+       </button>
+       <button class="btn danger" id="deleteApplicationBtn" type="button">
+        DELETE APPLICATION
+       </button>
+      </div>
+      <div aria-live="polite" class="message" id="detailMessage">
+      </div>
+     </section>
+    </div>
+   </div>
+  </main>
+  <footer class="wrap footer">
+   HEXORA Esports · Keep applicant information private.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
   </script>
-</body>
+  <script>
+   const SUPABASE_URL='https://sitmoiydrwcgvrydjhja.supabase.co';
+const SUPABASE_KEY='sb_publishable_7eIOZi6mN8c5dH9PJclvaw_Cav6Z8gt';
+const ADMIN_UID='3316cc18-b2af-49ad-b050-bc40aa43280c';
+const BUCKET='hxr-player-screenshots';
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const $=id=>document.getElementById(id);
+let roster=[],applications=[],selectedApplication=null;
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function msg(id,text,type=''){const e=$(id);e.textContent=text;e.className='message '+type;}
+function authorized(user){return !!user&&user.id===ADMIN_UID;}
+function showLogin(text=''){ $('loginPanel').classList.remove('hidden');$('dashboard').classList.add('hidden');if(text)msg('loginMessage',text,'error');}
+async function restoreSession(){const {data,error}=await db.auth.getSession();if(error){showLogin(error.message);return;}const user=data.session?.user;if(authorized(user)){ $('loginPanel').classList.add('hidden');$('dashboard').classList.remove('hidden');await loadMembers();}else{if(user)await db.auth.signOut();showLogin(user?'This account is not authorized as the HEXORA admin.':'');}}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();$('loginBtn').disabled=true;msg('loginMessage','Signing in…');try{const {data,error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)throw error;if(!authorized(data.user)){await db.auth.signOut();throw new Error('This account is not authorized as the HEXORA admin.');}$('loginPanel').classList.add('hidden');$('dashboard').classList.remove('hidden');msg('loginMessage','Signed in successfully.','success');await loadMembers();}catch(err){msg('loginMessage',err.message||'Sign in failed.','error');}finally{$('loginBtn').disabled=false;}});
+$('signOutBtn').addEventListener('click',async()=>{await db.auth.signOut();roster=[];applications=[];selectedApplication=null;showLogin('You have signed out.');});
+db.auth.onAuthStateChange((_event,session)=>{if(!session){$('dashboard').classList.add('hidden');$('loginPanel').classList.remove('hidden');}});
+function switchTab(which){const apps=which==='apps';$('rosterSection').classList.toggle('hidden',apps);$('applicationsSection').classList.toggle('hidden',!apps);$('rosterTab').classList.toggle('active',!apps);$('applicationsTab').classList.toggle('active',apps);if(apps)loadApplications();}
+$('rosterTab').addEventListener('click',()=>switchTab('roster'));$('applicationsTab').addEventListener('click',()=>switchTab('apps'));
+async function loadMembers(){ $('memberList').innerHTML='<p class="muted">Loading…</p>';const {data,error}=await db.from('team_members').select('*').order('sort_order',{ascending:true}).order('created_at',{ascending:true});if(error){$('memberList').innerHTML='';msg('listMessage','Could not load roster: '+error.message,'error');return;}roster=data||[];renderMembers();msg('listMessage',`${roster.length} roster member(s) loaded.`,'success');}
+function renderMembers(){if(!roster.length){$('memberList').innerHTML='<p class="muted">No players added yet.</p>';return;}$('memberList').innerHTML=roster.map(m=>`<article class="member"><div class="member-main">${m.screenshot_url?`<img class="thumb" src="${esc(m.screenshot_url)}" alt="Player screenshot">`:''}<div class="member-info"><h3>${esc(m.ign||m.name)}</h3><p>${esc(m.name)} · ${esc(m.role||'Player')}<br>UID: ${esc(m.bgmi_uid||'—')} · Rank: ${esc(m.rank||'—')} · Level: ${esc(m.level||'—')}</p></div></div><div class="member-actions"><button class="btn secondary" data-edit="${esc(m.id)}">EDIT</button><button class="btn danger" data-delete="${esc(m.id)}">DELETE</button></div></article>`).join('');$('memberList').querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>editMember(roster.find(m=>String(m.id)===b.dataset.edit))));$('memberList').querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>deleteMember(roster.find(m=>String(m.id)===b.dataset.delete))));}
+function editMember(m){if(!m)return;$('memberId').value=m.id;$('name').value=m.name||'';$('ign').value=m.ign||'';$('role').value=m.role||'Player';$('level').value=m.level||'';$('bgmi_uid').value=m.bgmi_uid||'';$('rank').value=m.rank||'';$('sort_order').value=m.sort_order??0;$('screenshot').value='';$('formTitle').textContent='Edit player';$('saveBtn').textContent='UPDATE PLAYER';msg('formMessage','Editing '+(m.ign||m.name)+'.');window.scrollTo({top:0,behavior:'smooth'});}
+function clearForm(){$('memberForm').reset();$('memberId').value='';$('sort_order').value='0';$('formTitle').textContent='Add a player';$('saveBtn').textContent='SAVE PLAYER';msg('formMessage','');}
+$('cancelEditBtn').addEventListener('click',clearForm);$('refreshRosterBtn').addEventListener('click',loadMembers);
+async function uploadScreenshot(file){if(!file)return null;if(file.size>5*1024*1024)throw new Error('Please choose an image under 5 MB.');if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Use JPG, PNG, or WEBP image format.');const ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg';const path=`${ADMIN_UID}/${Date.now()}-${crypto.randomUUID()}.${ext}`;const {error}=await db.storage.from(BUCKET).upload(path,file,{upsert:false,contentType:file.type});if(error)throw error;return db.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;}
+$('memberForm').addEventListener('submit',async e=>{e.preventDefault();$('saveBtn').disabled=true;msg('formMessage','Saving player…');try{const {data:{user}}=await db.auth.getUser();if(!authorized(user))throw new Error('Please sign in with the authorized admin account.');const id=$('memberId').value;const payload={name:$('name').value.trim(),ign:$('ign').value.trim(),role:$('role').value,level:$('level').value.trim()||null,bgmi_uid:$('bgmi_uid').value.trim()||null,rank:$('rank').value.trim()||null,sort_order:Number($('sort_order').value)||0};const file=$('screenshot').files[0];if(file)payload.screenshot_url=await uploadScreenshot(file);const result=id?await db.from('team_members').update(payload).eq('id',id):await db.from('team_members').insert(payload);if(result.error)throw result.error;msg('formMessage',id?'Player updated.':'Player added.','success');clearForm();await loadMembers();}catch(err){msg('formMessage',err.message||'Could not save player. Check table and storage policies.','error');}finally{$('saveBtn').disabled=false;}});
+async function deleteMember(m){if(!m||!confirm(`Delete ${m.ign||m.name}? This cannot be undone.`))return;msg('listMessage','Deleting…');const {error}=await db.from('team_members').delete().eq('id',m.id);if(error){msg('listMessage',error.message,'error');return;}if(m.screenshot_url){const marker='/storage/v1/object/public/'+BUCKET+'/';const pos=m.screenshot_url.indexOf(marker);if(pos>=0){const path=decodeURIComponent(m.screenshot_url.slice(pos+marker.length));await db.storage.from(BUCKET).remove([path]);}}msg('listMessage','Roster member deleted.','success');await loadMembers();}
+const appFields=[['Full name','full_name'],['Email','contact_email'],['Discord / contact','discord'],['Age','age'],['Category','category'],['BGMI IGN','ign'],['BGMI UID','bgmi_uid'],['Current rank','current_rank'],['KD','kd'],['Preferred player role','player_role'],['Experience','experience'],['Platform','platform'],['Audience size','audience'],['Content type','content_type'],['Staff role','staff_role'],['Availability','availability'],['Social / portfolio link','social_link'],['Why join HEXORA','why_join'],['Submitted','created_at']];
+async function loadApplications(){msg('applicationsMessage','Loading applications…');const {data,error}=await db.from('recruitment_applications').select('*').order('created_at',{ascending:false}).limit(500);if(error){applications=[];renderApplications();msg('applicationsMessage','Could not load applications. Check the recruitment table and admin RLS policy. '+error.message,'error');return;}applications=data||[];renderApplications();msg('applicationsMessage',`${applications.length} application(s) loaded.`,'success');}
+function renderApplications(){const total=applications.length;$('totalCount').textContent=total;$('newCount').textContent=applications.filter(a=>a.status==='New').length;$('reviewCount').textContent=applications.filter(a=>a.status==='Reviewing').length;$('shortCount').textContent=applications.filter(a=>a.status==='Shortlisted').length;const q=$('appSearch').value.trim().toLowerCase(),st=$('statusFilter').value,role=$('roleFilter').value;const rows=applications.filter(a=>(st==='All'||(a.status||'New')===st)&&(role==='All'||a.category===role)&&(!q||[a.full_name,a.contact_email,a.ign,a.category,a.discord].some(v=>String(v||'').toLowerCase().includes(q))));if(!rows.length){$('applicationsBody').innerHTML='<tr><td colspan="6">No applications match this filter.</td></tr>';return;}$('applicationsBody').innerHTML=rows.map(a=>`<tr><td><strong>${esc(a.full_name)}</strong><span class="sub">${esc(a.contact_email)}</span><span class="sub">${esc(a.ign||a.discord||'')}</span></td><td>${esc(a.category)}</td><td>${esc(a.experience||'—')}</td><td>${esc(a.created_at?new Date(a.created_at).toLocaleString():'—')}</td><td><select class="status-select" data-status="${esc(a.id)}">${['New','Reviewing','Shortlisted','Accepted','Rejected'].map(s=>`<option ${((a.status||'New')===s)?'selected':''}>${s}</option>`).join('')}</select></td><td><div class="app-actions"><button class="btn secondary small" data-view="${esc(a.id)}">VIEW</button><button class="btn small" data-accept="${esc(a.id)}">CONFIRM</button><button class="btn danger small" data-reject="${esc(a.id)}">REJECT</button><button class="btn danger small" data-app-delete="${esc(a.id)}">DELETE</button></div></td></tr>`).join('');$('applicationsBody').querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>updateApplicationStatus(s.dataset.status,s.value)));$('applicationsBody').querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>viewApplication(applications.find(a=>String(a.id)===b.dataset.view))));$('applicationsBody').querySelectorAll('[data-accept]').forEach(b=>b.addEventListener('click',()=>{const a=applications.find(x=>String(x.id)===b.dataset.accept);if(a&&confirm(`Confirm ${a.full_name||'this applicant'}?`))updateApplicationStatus(a.id,'Accepted');}));$('applicationsBody').querySelectorAll('[data-reject]').forEach(b=>b.addEventListener('click',()=>{const a=applications.find(x=>String(x.id)===b.dataset.reject);if(a&&confirm(`Reject ${a.full_name||'this applicant'}?`))updateApplicationStatus(a.id,'Rejected');}));$('applicationsBody').querySelectorAll('[data-app-delete]').forEach(b=>b.addEventListener('click',()=>deleteApplication(applications.find(a=>String(a.id)===b.dataset.appDelete))));}
+$('appSearch').addEventListener('input',renderApplications);$('statusFilter').addEventListener('change',renderApplications);$('roleFilter').addEventListener('change',renderApplications);$('refreshApplicationsBtn').addEventListener('click',loadApplications);
+async function updateApplicationStatus(id,status){msg('applicationsMessage','Updating application status…');const {error}=await db.from('recruitment_applications').update({status}).eq('id',id);if(error){msg('applicationsMessage','Status update failed: '+error.message,'error');await loadApplications();return;}const a=applications.find(x=>String(x.id)===String(id));if(a)a.status=status;renderApplications();msg('applicationsMessage','Application status updated.','success');if(selectedApplication&&String(selectedApplication.id)===String(id))selectedApplication.status=status;}
+function viewApplication(a){if(!a)return;selectedApplication=a;$('applicationDetail').classList.remove('hidden');$('detailTitle').textContent=a.full_name||'Application details';$('detailSubtitle').textContent=(a.category||'Application')+' · '+(a.contact_email||'No email');$('detailGrid').innerHTML=appFields.map(([label,key])=>`<div class="detail"><label>${esc(label)}</label><div>${key==='created_at'?esc(a[key]?new Date(a[key]).toLocaleString():'—'):key==='social_link'&&a[key]?`<a href="${esc(a[key])}" target="_blank" rel="noopener noreferrer" style="color:#ff6b7a">${esc(a[key])}</a>`:esc(a[key]||'—')}</div></div>`).join('')+`<div class="detail"><label>Current status</label><div>${esc(a.status||'New')}</div></div>`;$('adminNotes').value=a.admin_notes||'';msg('detailMessage','');$('applicationDetail').scrollIntoView({behavior:'smooth',block:'start'});}
+$('closeDetailBtn').addEventListener('click',()=>{$('applicationDetail').classList.add('hidden');selectedApplication=null;});
+$('saveNotesBtn').addEventListener('click',async()=>{if(!selectedApplication)return;const {error}=await db.from('recruitment_applications').update({admin_notes:$('adminNotes').value.trim()||null}).eq('id',selectedApplication.id);if(error){msg('detailMessage','Could not save notes. Run the SQL update that adds admin_notes, or remove notes feature. '+error.message,'error');return;}selectedApplication.admin_notes=$('adminNotes').value.trim();msg('detailMessage','Private notes saved.','success');});
+async function deleteApplication(a){if(!a||!confirm(`Delete the application from ${a.full_name||'this applicant'}? This cannot be undone.`))return;const {error}=await db.from('recruitment_applications').delete().eq('id',a.id);if(error){msg('applicationsMessage','Delete failed: '+error.message,'error');return;}if(selectedApplication&&String(selectedApplication.id)===String(a.id)){$('applicationDetail').classList.add('hidden');selectedApplication=null;}msg('applicationsMessage','Application deleted.','success');await loadApplications();}
+restoreSession();
+  </script>
+ </body>
 </html>
+
