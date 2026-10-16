@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#090909" name="theme-color"/>
+  <title>
+   Join HEXORA | HXR Esports
+  </title>
+  <style>
+   :root {
+  --bg:#080808;
+  --panel:#121212;
+  --line:#292929;
+  --red:#ef233c;
+  --text:#f5f5f5;
+  --muted:#aaa}
+* {
+  box-sizing:border-box}
+body {
+  margin:0;
+  background:radial-gradient(ellipse at 85% 0%,#351016 0,transparent 35%),var(--bg);
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif}
+.wrap {
+  width:min(1080px,92%);
+  margin:auto}
+header,footer {
+  border-bottom:1px solid var(--line);
+  padding:20px 0}
+.brand {
+  font-size:20px;
+  font-weight:950;
+  letter-spacing:2px}
+.brand span,.accent {
+  color:var(--red)}
+.top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px}
+.tag,.eyebrow {
+  font-size:10px;
+  letter-spacing:3px;
+  color:var(--red);
+  font-weight:900}
+main {
+  padding:48px 0 76px}
+h1 {
+  font-size:clamp(38px,7vw,76px);
+  line-height:.98;
+  letter-spacing:-2px;
+  margin:14px 0}
+.intro {
+  max-width:650px;
+  color:var(--muted);
+  line-height:1.7}
+.roles {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin:28px 0}
+.role {
+  background:linear-gradient(145deg,#171717,#0d0d0d);
+  border:1px solid var(--line);
+  padding:18px;
+  min-height:130px;
+  text-align:left;
+  color:var(--text);
+  font:inherit;
+  cursor:pointer}
+.role.active,.role:hover {
+  border-color:var(--red);
+  background:#1b1012}
+.role b {
+  display:block;
+  margin:10px 0}
+.role small,.muted {
+  color:var(--muted);
+  line-height:1.6}
+.panel {
+  border:1px solid var(--line);
+  background:#111;
+  padding:clamp(18px,4vw,30px);
+  margin-top:22px}
+.head {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap}
+h2 {
+  margin:0 0 8px}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:24px}
+.field {
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  min-width:0}
+.full {
+  grid-column:1/-1}
+label {
+  font-size:12px;
+  font-weight:750;
+  color:#ddd}
+input,select,textarea {
+  width:100%;
+  background:#080808;
+  border:1px solid #333;
+  color:#fff;
+  padding:13px 12px;
+  font:inherit;
+  min-width:0}
+textarea {
+  min-height:110px;
+  resize:vertical}
+input:focus,select:focus,textarea:focus {
+  outline:1px solid var(--red);
+  border-color:var(--red)}
+.btn {
+  background:var(--red);
+  border:1px solid var(--red);
+  color:white;
+  padding:14px 18px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+  cursor:pointer}
+.btn:disabled {
+  opacity:.55}
+.actions {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:22px}
+.message {
+  font-size:13px;
+  line-height:1.6;
+  overflow-wrap:anywhere}
+.error {
+  color:#ff8792}
+.success {
+  color:#91edb1}
+.hidden {
+  display:none!important}
+.notice {
+  border-left:3px solid var(--red);
+  padding:12px 14px;
+  background:#1a1012;
+  color:#ccc;
+  font-size:12px;
+  line-height:1.6;
+  margin-top:20px}
+footer {
+  border-top:1px solid var(--line);
+  border-bottom:0;
+  color:#777;
+  font-size:11px;
+  letter-spacing:1px}
+@media(max-width:650px) {
+  .roles,.grid {
+  grid-template-columns:1fr}
+.full {
+  grid-column:auto}
+.tag {
+  display:none}
+main {
+  padding-top:32px}
+}
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="wrap top">
+    <div class="brand">
+     HEXORA
+     <span>
+      ESPORTS
+     </span>
+    </div>
+    <div class="tag">
+     HXR &middot; RECRUITMENT OPEN
+    </div>
+   </div>
+  </header>
+  <main class="wrap">
+   <div class="eyebrow">
+    PLAY &middot; GRIND &middot; DOMINATE
+   </div>
+   <h1>
+    FIND YOUR
+    <br/>
+    <span class="accent">
+     PLACE IN HXR.
+    </span>
+   </h1>
+   <p class="intro">
+    We&rsquo;re looking for dedicated players, creative minds, and reliable people behind the scenes. Choose your track and apply to HEXORA Esports.
+   </p>
+   <div class="roles">
+    <button class="role active" data-category="Player" type="button">
+     <span class="eyebrow">
+      01 /
+     </span>
+     <b>
+      Competitive Player
+     </b>
+     <small>
+      BGMI players ready to practise, compete, and improve.
+     </small>
+    </button>
+    <button class="role" data-category="Content Creator" type="button">
+     <span class="eyebrow">
+      02 /
+     </span>
+     <b>
+      Content Creator
+     </b>
+     <small>
+      Videos, reels, streams, and community content.
+     </small>
+    </button>
+    <button class="role" data-category="Support Staff" type="button">
+     <span class="eyebrow">
+      03 /
+     </span>
+     <b>
+      Support Staff
+     </b>
+     <small>
+      Editors, designers, managers, and tournament support.
+     </small>
+    </button>
+   </div>
+   <section class="panel">
+    <div class="head">
+     <div>
+      <h2 id="heading">
+       Player application
+      </h2>
+      <div class="muted">
+       Fields marked * are required.
+      </div>
+     </div>
+     <div class="eyebrow">
+      APPLICATION / HXR
+     </div>
+    </div>
+    <form id="form">
+     <input id="category" type="hidden" value="Player"/>
+     <div class="grid">
+      <div class="field">
+       <label for="full_name">
+        Full name / preferred name *
+       </label>
+       <input autocomplete="name" id="full_name" maxlength="100" placeholder="Your name" required=""/>
+      </div>
+      <div class="field">
+       <label for="contact_email">
+        Email address *
+       </label>
+       <input autocomplete="email" id="contact_email" maxlength="254" placeholder="you@example.com" required="" type="email"/>
+      </div>
+      <div class="field">
+       <label for="discord">
+        Discord username
+       </label>
+       <input id="discord" maxlength="100" placeholder="username"/>
+      </div>
+      <div class="field">
+       <label for="age">
+        Age *
+       </label>
+       <input id="age" max="100" min="13" placeholder="Your age" required="" type="number"/>
+      </div>
+      <div class="field player">
+       <label for="ign">
+        BGMI in-game name (IGN) *
+       </label>
+       <input id="ign" maxlength="100" placeholder="Your BGMI name"/>
+      </div>
+      <div class="field player">
+       <label for="bgmi_uid">
+        BGMI UID *
+       </label>
+       <input id="bgmi_uid" maxlength="40" placeholder="Your in-game UID"/>
+      </div>
+      <div class="field player">
+       <label for="current_rank">
+        Current rank
+       </label>
+       <input id="current_rank" maxlength="60" placeholder="e.g. Ace / Crown"/>
+      </div>
+      <div class="field player">
+       <label for="kd">
+        KD (optional)
+       </label>
+       <input id="kd" maxlength="20" placeholder="e.g. 2.5"/>
+      </div>
+      <div class="field player">
+       <label for="player_role">
+        Preferred role
+       </label>
+       <select id="player_role">
+        <option value="">
+         Select role
+        </option>
+        <option>
+         IGL
+        </option>
+        <option>
+         Assaulter
+        </option>
+        <option>
+         Support
+        </option>
+        <option>
+         Scout
+        </option>
+        <option>
+         Sniper
+        </option>
+        <option>
+         Flex
+        </option>
+        <option>
+         Substitute
+        </option>
+       </select>
+      </div>
+      <div class="field player">
+       <label for="experience">
+        Competitive experience
+       </label>
+       <select id="experience">
+        <option value="">
+         Select experience
+        </option>
+        <option>
+         New to competitive
+        </option>
+        <option>
+         Scrims
+        </option>
+        <option>
+         Small tournaments
+        </option>
+        <option>
+         Official qualifiers / major tournaments
+        </option>
+       </select>
+      </div>
+      <div class="field creator hidden">
+       <label for="platform">
+        Main platform *
+       </label>
+       <select id="platform">
+        <option value="">
+         Select platform
+        </option>
+        <option>
+         YouTube
+        </option>
+        <option>
+         Instagram
+        </option>
+        <option>
+         Facebook
+        </option>
+        <option>
+         Twitch
+        </option>
+        <option>
+         Multiple platforms
+        </option>
+       </select>
+      </div>
+      <div class="field creator hidden">
+       <label for="audience">
+        Audience / follower count
+       </label>
+       <input id="audience" maxlength="50" placeholder="Approximate audience size"/>
+      </div>
+      <div class="field creator hidden full">
+       <label for="content_type">
+        Content you make *
+       </label>
+       <input id="content_type" maxlength="200" placeholder="e.g. edits, gameplay, livestreams"/>
+      </div>
+      <div class="field staff hidden">
+       <label for="staff_role">
+        Role you want *
+       </label>
+       <select id="staff_role">
+        <option value="">
+         Select role
+        </option>
+        <option>
+         Video Editor
+        </option>
+        <option>
+         Graphic Designer
+        </option>
+        <option>
+         Team Manager
+        </option>
+        <option>
+         Social Media Manager
+        </option>
+        <option>
+         Tournament Staff
+        </option>
+        <option>
+         Community Moderator
+        </option>
+        <option>
+         Other
+        </option>
+       </select>
+      </div>
+      <div class="field staff hidden">
+       <label for="availability">
+        Weekly availability
+       </label>
+       <input id="availability" maxlength="100" placeholder="e.g. evenings / weekends"/>
+      </div>
+      <div class="field full">
+       <label for="social_link">
+        Social profile / portfolio link
+       </label>
+       <input id="social_link" maxlength="500" placeholder="https://..." type="url"/>
+       <small class="muted">
+        Optional: add a public profile or work sample.
+       </small>
+      </div>
+      <div class="field full">
+       <label for="why_join">
+        Tell us about yourself and why you want to join *
+       </label>
+       <textarea id="why_join" maxlength="2000" placeholder="Your experience, strengths, goals..." required=""></textarea>
+      </div>
+      <div class="field full">
+       <label style="display:flex;gap:10px;align-items:flex-start;font-weight:500">
+        <input id="consent" required="" style="width:auto;margin-top:2px" type="checkbox"/>
+        <span>
+         I confirm these details are accurate and agree that HEXORA Esports may use them to review this application.
+        </span>
+       </label>
+      </div>
+     </div>
+     <div class="actions">
+      <button class="btn" id="submit" type="submit">
+       SUBMIT APPLICATION &nearrow;
+      </button>
+      <span aria-live="polite" class="message" id="message">
+      </span>
+     </div>
+     <div class="notice">
+      Never share passwords, OTPs, or payment details. Submitting this form does not guarantee selection.
+     </div>
+    </form>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap">
+    HEXORA ESPORTS &middot; HXR &middot; PLAY / GRIND / DOMINATE
+   </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+  </script>
+  <script>
+   const SUPABASE_URL='https://sitmoiydrwcgvrydjhja.supabase.co';
+  const SUPABASE_KEY='sb_publishable_7eIOZi6mN8c5dH9PJclvaw_Cav6Z8gt';
+  const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+  const $=id=>document.getElementById(id),form=$('form'),msg=$('message'),submit=$('submit');
+  const config={'Player':{heading:'Player application',required:['ign','bgmi_uid']},'Content Creator':{heading:'Content creator application',required:['platform','content_type']},'Support Staff':{heading:'Support staff application',required:['staff_role']}};
+  
+
+function choose(category){$('category').value=category;
+  $('heading').textContent=config[category].heading;
+  
+document.querySelectorAll('.role').forEach(b=>b.classList.toggle('active',b.dataset.category===category));
+  document.querySelectorAll('.player').forEach(e=>e.classList.toggle('hidden',category!=='Player'));
+  document.querySelectorAll('.creator').forEach(e=>e.classList.toggle('hidden',category!=='Content Creator'));
+  document.querySelectorAll('.staff').forEach(e=>e.classList.toggle('hidden',category!=='Support Staff'));
+  ['ign','bgmi_uid','platform','content_type','staff_role'].forEach(id=>$(id).required=config[category].required.includes(id));
+  msg.textContent='';
+  msg.className='message'}
+document.querySelectorAll('.role').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.category)));
+  
+
+form.addEventListener('submit',async e=>{e.preventDefault();
+  msg.textContent='';
+  msg.className='message';
+  submit.disabled=true;
+  submit.textContent='SUBMITTING…';
+  try{const v=id=>$(id).value.trim(),age=Number(v('age'));
+  if(!Number.isInteger(age)||age<13||age>100)throw Error('Please enter a valid age.');
+  const payload={full_name:v('full_name'),contact_email:v('contact_email'),discord:v('discord')||null,age,category:v('category'),ign:v('ign')||null,bgmi_uid:v('bgmi_uid')||null,current_rank:v('current_rank')||null,kd:v('kd')||null,player_role:v('player_role')||null,experience:v('experience')||null,platform:v('platform')||null,audience:v('audience')||null,content_type:v('content_type')||null,staff_role:v('staff_role')||null,availability:v('availability')||null,social_link:v('social_link')||null,why_join:v('why_join')};
+  const {error}=await db.from('recruitment_applications').insert(payload);
+  if(error)throw error;
+  msg.textContent='Application submitted successfully! Thank you for your interest in HEXORA Esports.';
+  msg.className='message success';
+  form.reset();
+  choose('Player')}catch(err){console.error(err);
+  msg.textContent=err.message||'Could not submit. Check Supabase setup and try again.';
+  msg.className='message error'}finally{submit.disabled=false;
+  submit.textContent='SUBMIT APPLICATION ↗'}});
+  </script>
+ </body>
+</html>
