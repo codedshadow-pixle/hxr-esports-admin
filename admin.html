@@ -715,7 +715,32 @@ const appFields=[['Full name','full_name'],['Email','contact_email'],['Discord /
 async function loadApplications(){msg('applicationsMessage','Loading applications…');const {data,error}=await db.from('recruitment_applications').select('*').order('created_at',{ascending:false}).limit(500);if(error){applications=[];renderApplications();msg('applicationsMessage','Could not load applications. Check the recruitment table and admin RLS policy. '+error.message,'error');return;}applications=data||[];renderApplications();msg('applicationsMessage',`${applications.length} application(s) loaded.`,'success');}
 function renderApplications(){const total=applications.length;$('totalCount').textContent=total;$('newCount').textContent=applications.filter(a=>a.status==='New').length;$('reviewCount').textContent=applications.filter(a=>a.status==='Reviewing').length;$('shortCount').textContent=applications.filter(a=>a.status==='Shortlisted').length;const q=$('appSearch').value.trim().toLowerCase(),st=$('statusFilter').value,role=$('roleFilter').value;const rows=applications.filter(a=>(st==='All'||(a.status||'New')===st)&&(role==='All'||a.category===role)&&(!q||[a.full_name,a.contact_email,a.ign,a.category,a.discord].some(v=>String(v||'').toLowerCase().includes(q))));if(!rows.length){$('applicationsBody').innerHTML='<tr><td colspan="6">No applications match this filter.</td></tr>';return;}$('applicationsBody').innerHTML=rows.map(a=>`<tr><td><strong>${esc(a.full_name)}</strong><span class="sub">${esc(a.contact_email)}</span><span class="sub">${esc(a.ign||a.discord||'')}</span></td><td>${esc(a.category)}</td><td>${esc(a.experience||'—')}</td><td>${esc(a.created_at?new Date(a.created_at).toLocaleString():'—')}</td><td><select class="status-select" data-status="${esc(a.id)}">${['New','Reviewing','Shortlisted','Accepted','Rejected'].map(s=>`<option ${((a.status||'New')===s)?'selected':''}>${s}</option>`).join('')}</select></td><td><div class="app-actions"><button class="btn secondary small" data-view="${esc(a.id)}">VIEW</button><button class="btn small" data-accept="${esc(a.id)}">CONFIRM</button><button class="btn danger small" data-reject="${esc(a.id)}">REJECT</button><button class="btn danger small" data-app-delete="${esc(a.id)}">DELETE</button></div></td></tr>`).join('');$('applicationsBody').querySelectorAll('[data-status]').forEach(s=>s.addEventListener('change',()=>updateApplicationStatus(s.dataset.status,s.value)));$('applicationsBody').querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>viewApplication(applications.find(a=>String(a.id)===b.dataset.view))));$('applicationsBody').querySelectorAll('[data-accept]').forEach(b=>b.addEventListener('click',()=>{const a=applications.find(x=>String(x.id)===b.dataset.accept);if(a&&confirm(`Confirm ${a.full_name||'this applicant'}?`))updateApplicationStatus(a.id,'Accepted');}));$('applicationsBody').querySelectorAll('[data-reject]').forEach(b=>b.addEventListener('click',()=>{const a=applications.find(x=>String(x.id)===b.dataset.reject);if(a&&confirm(`Reject ${a.full_name||'this applicant'}?`))updateApplicationStatus(a.id,'Rejected');}));$('applicationsBody').querySelectorAll('[data-app-delete]').forEach(b=>b.addEventListener('click',()=>deleteApplication(applications.find(a=>String(a.id)===b.dataset.appDelete))));}
 $('appSearch').addEventListener('input',renderApplications);$('statusFilter').addEventListener('change',renderApplications);$('roleFilter').addEventListener('change',renderApplications);$('refreshApplicationsBtn').addEventListener('click',loadApplications);
-async function updateApplicationStatus(id,status){msg('applicationsMessage','Updating application status…');const {error}=await db.from('recruitment_applications').update({status}).eq('id',id);if(error){msg('applicationsMessage','Status update failed: '+error.message,'error');await loadApplications();return;}const a=applications.find(x=>String(x.id)===String(id));if(a)a.status=status;renderApplications();msg('applicationsMessage','Application status updated.','success');if(selectedApplication&&String(selectedApplication.id)===String(id))selectedApplication.status=status;}
+async function updateApplicationStatus(id,status){
+  msg('applicationsMessage','Updating application status…');
+  try {
+    const { data, error } = await db.functions.invoke('notify-application-status', {
+      body: { applicationId: id, status }
+    });
+    if (error) throw error;
+    if (data?.error) throw new Error(data.error);
+    const a = applications.find(x => String(x.id) === String(id));
+    if (a) a.status = status;
+    renderApplications();
+    if (selectedApplication && String(selectedApplication.id) === String(id)) selectedApplication.status = status;
+    if (['Accepted','Rejected'].includes(status)) {
+      if (data?.emailSent) {
+        msg('applicationsMessage', `Status updated to ${status}. Email sent to applicant.`, 'success');
+      } else {
+        msg('applicationsMessage', `Status updated to ${status}, but email was not sent. Check Edge Function secrets/logs.`, 'error');
+      }
+    } else {
+      msg('applicationsMessage', 'Application status updated.', 'success');
+    }
+  } catch (err) {
+    msg('applicationsMessage', 'Status update failed: ' + (err.message || 'Unknown error'), 'error');
+    await loadApplications();
+  }
+}
 function viewApplication(a){if(!a)return;selectedApplication=a;$('applicationDetail').classList.remove('hidden');$('detailTitle').textContent=a.full_name||'Application details';$('detailSubtitle').textContent=(a.category||'Application')+' · '+(a.contact_email||'No email');$('detailGrid').innerHTML=appFields.map(([label,key])=>`<div class="detail"><label>${esc(label)}</label><div>${key==='created_at'?esc(a[key]?new Date(a[key]).toLocaleString():'—'):key==='social_link'&&a[key]?`<a href="${esc(a[key])}" target="_blank" rel="noopener noreferrer" style="color:#ff6b7a">${esc(a[key])}</a>`:esc(a[key]||'—')}</div></div>`).join('')+`<div class="detail"><label>Current status</label><div>${esc(a.status||'New')}</div></div>`;$('adminNotes').value=a.admin_notes||'';msg('detailMessage','');$('applicationDetail').scrollIntoView({behavior:'smooth',block:'start'});}
 $('closeDetailBtn').addEventListener('click',()=>{$('applicationDetail').classList.add('hidden');selectedApplication=null;});
 $('saveNotesBtn').addEventListener('click',async()=>{if(!selectedApplication)return;const {error}=await db.from('recruitment_applications').update({admin_notes:$('adminNotes').value.trim()||null}).eq('id',selectedApplication.id);if(error){msg('detailMessage','Could not save notes. Run the SQL update that adds admin_notes, or remove notes feature. '+error.message,'error');return;}selectedApplication.admin_notes=$('adminNotes').value.trim();msg('detailMessage','Private notes saved.','success');});
@@ -724,4 +749,3 @@ restoreSession();
   </script>
  </body>
 </html>
-
