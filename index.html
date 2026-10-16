@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10110f">
+  <meta name="theme-color" content="#08090c">
   <meta name="description" content="HXR Esports — Competitive gaming, team culture, and the next level.">
-  <title>HXR — Esports</title>
+  <title>HEXORA Esports — ARENA ZERO</title>
   <style>
     @import url('https\://fonts.googleapis.com/css2?family=Barlow+Condensed:wght\@500;600;700;800;900&family=DM+Sans:wght\@400;500;600;700&display=swap');
     :root {
-      --bg: #10110f;
-      --surface: #171815;
-      --surface-2: #1e201b;
-      --text: #f3f3ed;
-      --muted: #91938a;
-      --line: #30312b;
-      --accent: #c8ff4d;
+      --bg: #08090c;
+      --surface: #11141a;
+      --surface-2: #1a1d25;
+      --text: #f4f5f8;
+      --muted: #9299a8;
+      --line: #2a2e38;
+      --accent: #ed2939;
       --dark: #10110f;
       --max: 1240px;
     }
@@ -1213,7 +1213,16 @@
     .roster-empty { border:1px dashed var(--line); border-radius:12px; padding:25px; color:var(--muted); font-size:13px; }
     .database-photo { width:100%; max-height:220px; object-fit:contain; display:block; border-radius:8px; margin-bottom:12px; background:#0b0c0a; }
     @media(max-width:600px) { .admin-form { grid-template-columns:1fr; } .admin-field.full { grid-column:auto; } .admin-body { padding:16px; } .admin-head { padding:16px; } .admin-member { align-items:flex-start; flex-direction:column; } .admin-member-actions { width:100%; } }
-  </style>
+  
+/* ARENA ZERO — cinematic stadium system */
+:root{--bg:#08090c;--surface:#10131a;--surface-2:#171b24;--text:#f4f5f8;--muted:#9299a8;--line:#2a2e38;--accent:#ed2939;--dark:#08090c;--arena-red:#ed2939}
+body{background:radial-gradient(ellipse at 50% -18%,rgba(237,41,57,.18),transparent 48%),#08090c;color:var(--text)}
+body:before{opacity:.09;mix-blend-mode:screen}.navbar{background:rgba(8,9,12,.88);border-color:#252833;backdrop-filter:blur(18px)}.brand-mark{background:var(--arena-red);box-shadow:0 0 24px #ed293933}.nav-links a{color:#d6d8df}.nav-cta,.btn{background:var(--arena-red);border-color:var(--arena-red);box-shadow:0 8px 26px #ed293925}.hero{padding-top:44px;background:radial-gradient(ellipse at 74% 35%,#25202a 0,transparent 42%)}.hero:after{color:rgba(255,255,255,.025);content:'ARENA'}
+.hero-grid{min-height:590px;grid-template-columns:1fr 1fr;gap:26px}.hero h1{font-size:clamp(100px,13vw,184px);letter-spacing:-.065em;text-shadow:0 8px 40px #000}.hero h1 span,.section-heading h2 span{color:var(--arena-red)}.hero-description{color:#a8adba}.hero-visual{min-height:500px;background:radial-gradient(ellipse at 50% 28%,#ed293966,transparent 28%),linear-gradient(180deg,#29202a 0%,#11141d 54%,#08090c 100%);clip-path:polygon(8% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%);border:1px solid #ffffff12;box-shadow:inset 0 0 100px #000,0 30px 100px #ed293916}.hero-visual:before{inset:0;background:repeating-linear-gradient(90deg,transparent 0 48px,#ffffff08 49px 50px),linear-gradient(180deg,transparent 45%,#ed293920 45.3%,transparent 46%);transform:none}.hero-visual:after{content:'';position:absolute;inset:15% 5% 0;background:repeating-linear-gradient(0deg,transparent 0 35px,#ed293918 36px 37px);transform:perspective(240px) rotateX(48deg);transform-origin:bottom;mask-image:linear-gradient(transparent,#000)}.hero-emblem{z-index:2;width:100%;padding:0 15px}.emblem-text{font-size:clamp(150px,20vw,260px);color:#fff;text-shadow:0 0 30px #ed293966,8px 8px 0 #ed2939;animation:arenaPulse 4s ease-in-out infinite}.emblem-label{font-size:10px;letter-spacing:3px}.arena-lights{position:absolute;top:-145px;left:10%;right:10%;display:flex;justify-content:space-around;filter:blur(1px)}.arena-lights i{width:3px;height:230px;background:linear-gradient(transparent,#ff4354,transparent);box-shadow:0 0 22px #ed2939;transform:rotate(22deg)}.arena-score{display:flex;align-items:center;justify-content:space-around;gap:8px;margin:26px auto 0;padding:13px 10px;border:1px solid #ffffff25;background:#08090cc9;font:9px 'DM Mono',monospace;letter-spacing:1px}.arena-score b{font-size:14px;color:var(--arena-red)}.hero-bottom{border-color:#292d37;color:#a7adba}.hero-bottom strong,.eyebrow,.principle-number,.roster-group-label span{color:var(--arena-red)}.principles{border-color:#2a2e38;background:#0d0f14}.principle{border-color:#2a2e38}.principle p,.section-heading p,.roster-note{color:#9aa1b0}.section{background:#0b0d12;padding:100px 0}.section:nth-of-type(even){background:#10131a}.section-heading h2{color:#f4f5f8}.roster-group-label{border-color:var(--arena-red)}.player-card,.management-card{background:linear-gradient(145deg,#171b24,#0e1016);border-color:#292e39;color:#f4f5f8;box-shadow:0 15px 35px #0003}.player-card:before,.management-card:before{width:64px;height:3px;box-shadow:0 0 14px #ed2939}.player-card:hover,.management-card:hover{box-shadow:0 20px 50px #0007,5px 5px 0 var(--arena-red)}.player-silhouette{background:radial-gradient(ellipse at 50% 20%,#4a202b,#191c25 60%,#0c0e13);color:#ffffff16}.player-silhouette:after{box-shadow:0 0 15px #ed2939}.profile-details{border-color:#2c303b}.detail-row span,.player-role,.screenshot-slot small{color:#9aa1b0}.screenshot-slot{background:#10131a;border-color:#3a404d}.management-card p{color:#a0a6b4}.match-list{border-color:var(--arena-red)}.match-row{border-color:#2b303b;background:linear-gradient(90deg,#12151c,transparent)}.match-logo{background:#ed2939!important;color:#fff!important}.match-status{color:#ff6470}.about-grid{align-items:center}.about-art{background:radial-gradient(circle,#311820,#10131a 70%);border:1px solid #2b303b}.about-art strong{color:#ed2939;text-shadow:0 0 35px #ed293966}.join-panel{background:linear-gradient(110deg,#ed2939,#a91627);box-shadow:0 20px 60px #ed29391b}.footer{background:#050609;border-top:1px solid #282b34}.footer-bottom{border-color:#282b34}.reveal{transform:translateY(28px) scale(.99)}@keyframes arenaPulse{0%,100%{filter:drop-shadow(0 0 10px #ed293922)}50%{filter:drop-shadow(0 0 34px #ed293988)}}
+@media(max-width:950px){.hero-grid{grid-template-columns:1fr .9fr}.hero-visual{min-height:420px}.hero h1{font-size:clamp(95px,13vw,150px)}}
+@media(max-width:680px){.hero-grid{grid-template-columns:1fr}.hero-visual{min-height:340px}.hero h1{font-size:clamp(100px,25vw,155px)}.emblem-text{font-size:clamp(150px,43vw,220px)}.arena-lights{top:-120px}.nav-links{background:#0a0b10;border-color:#2a2e38}.section{padding:68px 0}.arena-score{font-size:8px}}
+
+</style>
 </head>
 <body>
   <!-- NAVIGATION -->
@@ -1233,9 +1242,8 @@
         <a href="#matches">Matches</a>
         <a href="#about">About</a>
         <a href="#join">Join Us</a>
-        <a href="#admin" id="openAdminNav">Admin Login</a>
       </nav>
-      <a href="#join" class="nav-cta">Get Involved <span>↗</span></a>
+      <a href="https://codedshadow-pixle.github.io/hxr-esports-admin/applicatiom.html" class="nav-cta" target="_blank" rel="noopener noreferrer">Apply to HXR <span>↗</span></a>
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -1253,27 +1261,26 @@
           <div class="hero-copy">
             <div class="status">
               <span class="status-dot"></span>
-              Competitive gaming identity
+              LIVE FROM THE HXR DIGITAL ARENA
             </div>
-            <h1>BUILT<br><span>TO PLAY.</span></h1>
+            <h1>ENTER<br><span>THE ARENA.</span></h1>
             <p class="hero-description">
-              More than a game. A mindset built on discipline, teamwork
-              and the constant pursuit of improvement.
+              The lights are on. The stage is set. HEXORA enters with one standard: focus, coordination and the will to improve every round.
             </p>
             <div class="hero-actions">
               <a href="#roster" class="btn btn-primary">
-                Explore the team <span>↗</span>
+                Meet the lineup <span>↗</span>
               </a>
               <a href="#about" class="btn btn-secondary">
-                Our philosophy <span>↓</span>
+                Arena briefing <span>↓</span>
               </a>
             </div>
           </div>
           <div class="hero-visual" aria-label="HXR team emblem">
-            <div class="hero-index">EST. / TEAM IDENTITY</div>
+            <div class="hero-index">ARENA ZERO / MATCHDAY INTERFACE</div>
             <div class="hero-emblem">
-              <div class="emblem-text">HXR</div>
-              <div class="emblem-label">FOCUS. EXECUTE. REPEAT.</div>
+              <div class="arena-lights"><i></i><i></i><i></i><i></i><i></i></div><div class="emblem-text">HXR</div>
+              <div class="emblem-label">FOCUS. EXECUTE. REPEAT.</div><div class="arena-score"><span>HOME / HXR</span><b>VS</b><span>AWAY / TBA</span></div>
             </div>
           </div>
         </div>
@@ -1281,7 +1288,7 @@
           <span><strong>01</strong>   Discipline</span>
           <span><strong>02</strong>   Teamwork</span>
           <span><strong>03</strong>   Progress</span>
-          <span>Competitive mindset / Always</span>
+          <span>ARENA STATUS / READY</span>
         </div>
       </div>
     </section>
@@ -1429,7 +1436,7 @@
         <div class="eyebrow reveal">On the competitive side</div>
         <div class="section-heading reveal">
           <h2>MATCH <span>CENTER.</span></h2>
-          <p>Follow team fixtures, competitive appearances and results once they're officially confirmed.</p>
+          <p>The scoreboard is staged for official fixtures. No scores or tournament placements are invented.</p>
         </div>
         <div class="match-list reveal">
           <article class="match-row">
@@ -1515,12 +1522,11 @@
             <div class="eyebrow">Your next move</div>
             <h2>MAKE YOUR<br>GAME COUNT.</h2>
             <p>
-              Interested in joining the roster, collaborating or working
-              with the team? Official contact details will be published here.
+              Ready to represent HEXORA? Submit your application through the official HXR recruitment form.
             </p>
           </div>
-          <a href="#home" class="btn">
-            Back to top <span>↑</span>
+          <a href="https://codedshadow-pixle.github.io/hxr-esports-admin/applicatiom.html" class="btn" target="_blank" rel="noopener noreferrer">
+            Apply to join HXR <span>↗</span>
           </a>
         </div>
       </div>
@@ -1559,43 +1565,6 @@
     </div>
   </footer>
 
-  <!-- ADMIN PANEL: Supabase-powered roster manager -->
-  <div class="admin-overlay" id="adminOverlay" aria-hidden="true">
-    <section class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
-      <header class="admin-head">
-        <h2 id="adminTitle">HXR <span>ADMIN.</span></h2>
-        <button class="admin-close" id="closeAdmin" aria-label="Close admin panel">✕</button>
-      </header>
-      <div class="admin-body">
-        <p class="admin-note">Log in with the admin user you created in Supabase Authentication. Player changes are saved to the database and appear on the public roster.</p>
-        <form id="adminLoginForm" class="admin-form">
-          <div class="admin-field full"><label for="adminEmail">Admin email</label><input id="adminEmail" type="email" autocomplete="username" required placeholder="you@example.com"></div>
-          <div class="admin-field full"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Your Supabase user password"></div>
-          <div class="admin-field full"><div class="admin-actions"><button class="admin-btn primary" type="submit">Log in</button></div></div>
-        </form>
-        <div id="adminWorkspace" class="admin-hidden">
-          <div class="admin-toolbar"><h3 id="editorHeading">Add team member</h3><button class="admin-btn" id="newMemberBtn" type="button">+ New member</button></div>
-          <form id="memberForm">
-            <input type="hidden" id="memberId">
-            <input type="hidden" id="oldScreenshotUrl">
-            <div class="admin-form">
-              <div class="admin-field"><label for="memberName">Display name</label><input id="memberName" required maxlength="80" placeholder="Player name"></div>
-              <div class="admin-field"><label for="memberRole">Role</label><select id="memberRole" required><option value="Player">Player</option><option value="Substitute">Substitute</option><option value="Coach">Coach</option><option value="Manager">Manager</option><option value="Owner">Owner</option></select></div>
-              <div class="admin-field"><label for="memberIgn">HXR IGN</label><input id="memberIgn" maxlength="80" placeholder="HXR PlayerIGN"></div>
-              <div class="admin-field"><label for="memberBgmiUid">BGMI UID</label><input id="memberBgmiUid" inputmode="numeric" maxlength="24" placeholder="In-game numeric UID"></div>
-              <div class="admin-field"><label for="memberLevel">BGMI level</label><input id="memberLevel" maxlength="40" placeholder="e.g. Level 65"></div>
-              <div class="admin-field"><label for="memberRank">BGMI rank</label><input id="memberRank" maxlength="40" placeholder="e.g. Crown III / Ace"></div>
-              <div class="admin-field full"><label for="memberScreenshot">Profile screenshot (JPG, PNG or WebP, max 5 MB)</label><input id="memberScreenshot" type="file" accept="image/jpeg,image/png,image/webp"></div>
-            </div>
-            <div class="admin-actions"><button class="admin-btn primary" id="saveMemberBtn" type="submit">Save member</button><button class="admin-btn" id="cancelEditBtn" type="button">Clear form</button><button class="admin-btn danger" id="logoutAdminBtn" type="button">Log out</button></div>
-          </form>
-          <div class="admin-toolbar"><h3>Current members</h3><button class="admin-btn" id="refreshMembersBtn" type="button">Refresh</button></div>
-          <div class="admin-list" id="adminMemberList"></div>
-        </div>
-        <p class="admin-status" id="adminStatus" role="status" aria-live="polite"></p>
-      </div>
-    </section>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     // Automatic copyright year
@@ -1648,245 +1617,31 @@
       revealElements.forEach(element => element.classList.add("visible"));
     }
 
-    // HXR ADMIN CONFIGURATION
-    // The publishable/anon key is designed for browser use; database RLS policies protect writes.
-    // Paste your Supabase Publishable key below. Never put a secret/service_role key here.
+    // Public, read-only roster integration. No admin/authentication code is included.
     const HXR_SUPABASE_URL = "https://sitmoiydrwcgvrydjhja.supabase.co";
     const HXR_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_7eIOZi6mN8c5dH9PJclvaw_Cav6Z8gt";
-    const HXR_ADMIN_UID = "3316cc18-b2af-49ad-b050-bc40aa43280c";
     const HXR_BUCKET = "hxr-player-screenshots";
-    const adminOverlay = document.getElementById("adminOverlay");
-    const adminStatus = document.getElementById("adminStatus");
-    const adminLoginForm = document.getElementById("adminLoginForm");
-    const adminWorkspace = document.getElementById("adminWorkspace");
-    const memberForm = document.getElementById("memberForm");
-    const adminMemberList = document.getElementById("adminMemberList");
-    let hxrSupabase = null;
-    let activeSession = null;
-    let cachedMembers = [];
-
-    function setAdminStatus(message, type = "") {
-      adminStatus.textContent = message;
-      adminStatus.className = "admin-status" + (type ? " " + type : "");
-    }
-    function openAdminPanel(event) {
-      if (event) event.preventDefault();
-      adminOverlay.classList.add("open");
-      adminOverlay.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      if (!hxrSupabase) {
-        if (HXR_SUPABASE_PUBLISHABLE_KEY === "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE") {
-          setAdminStatus("Setup needed: paste your Supabase Publishable key into HXR_SUPABASE_PUBLISHABLE_KEY in this HTML file.", "error");
-        } else {
-          hxrSupabase = window.supabase.createClient(HXR_SUPABASE_URL, HXR_SUPABASE_PUBLISHABLE_KEY);
-          restoreAdminSession();
-        }
-      } else {
-        restoreAdminSession();
-      }
-    }
-    function closeAdminPanel() {
-      adminOverlay.classList.remove("open");
-      adminOverlay.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-    document.getElementById("openAdminNav").addEventListener("click", openAdminPanel);
-    document.getElementById("closeAdmin").addEventListener("click", closeAdminPanel);
-    adminOverlay.addEventListener("click", e => { if (e.target === adminOverlay) closeAdminPanel(); });
-    document.addEventListener("keydown", e => { if (e.key === "Escape") closeAdminPanel(); });
-
-    function escapeHTML(value) {
-      return String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[ch]));
-    }
-    function makePublicImage(url, alt) {
-      if (!url) return '<div class="screenshot-slot"><b>SS</b><small>SCREENSHOT NOT ADDED</small></div>';
-      return '<img class="database-photo" src="' + escapeHTML(url) + '" alt="' + escapeHTML(alt) + '" loading="lazy">';
-    }
-    function memberCard(member, index) {
-      const role = member.role;
-      const management = ["Coach", "Manager", "Owner"].includes(role);
-      const symbol = role === "Substitute" ? "SUB" : role === "Coach" ? "CO" : role === "Manager" ? "MG" : role === "Owner" ? "OW" : String(index + 1).padStart(2,"0");
-      const label = role === "Player" ? "Main player" : role === "Substitute" ? "Substitute player" : role === "Coach" ? "Strategy & development" : role === "Manager" ? "Operations & coordination" : "Organization leadership";
-      const cls = management ? "management-card reveal" : "player-card reveal" + (role === "Substitute" ? " substitute-card" : "");
-      const photo = member.screenshot_url ? makePublicImage(member.screenshot_url, member.name + " profile screenshot") : '<div class="screenshot-slot"><b>SS</b><small>ADD ' + (management ? 'PROFILE' : 'PLAYER') + ' SCREENSHOT</small></div>';
-      return '<article class="' + cls + '" data-member-id="' + escapeHTML(member.id) + '">' +
-        '<div class="player-top"><span class="player-role">' + escapeHTML(label) + '</span><span class="player-symbol">' + symbol + '</span></div>' +
-        (management ? '' : '<div class="player-silhouette">HXR</div>') +
-        '<h3 class="player-name">' + escapeHTML(member.name) + '</h3>' +
-        (management ? '<p>' + escapeHTML(member.name) + ' · Team staff</p>' : '') +
-        '<div class="profile-details"><div class="detail-row"><span>IGN</span><strong>' + escapeHTML(member.ign || 'Not added') + '</strong></div><div class="detail-row"><span>BGMI UID</span><strong>' + escapeHTML(member.bgmi_uid || 'Not added') + '</strong></div><div class="detail-row"><span>Level</span><strong>' + escapeHTML(member.level || 'Not added') + '</strong></div><div class="detail-row"><span>Rank</span><strong>' + escapeHTML(member.rank || 'Not added') + '</strong></div></div>' + photo + '</article>';
-    }
-    function renderPublicRoster(members) {
-      const rosterSection = document.querySelector("#roster .container");
-      const groups = rosterSection ? rosterSection.querySelectorAll(".roster-grid") : [];
-      const managementGrid = document.querySelector("#management .management-grid");
-      if (!rosterSection || groups.length < 2 || !managementGrid) return;
-      const players = members.filter(m => m.role === "Player").sort((a,b) => (a.sort_order||0)-(b.sort_order||0));
-      const subs = members.filter(m => m.role === "Substitute").sort((a,b) => (a.sort_order||0)-(b.sort_order||0));
-      const staff = members.filter(m => ["Coach","Manager","Owner"].includes(m.role)).sort((a,b) => ["Coach","Manager","Owner"].indexOf(a.role)-["Coach","Manager","Owner"].indexOf(b.role));
-      if (members.length) {
-        groups[0].innerHTML = players.length ? players.map(memberCard).join("") : '<div class="roster-empty">No starting players added yet.</div>';
-        groups[1].innerHTML = subs.length ? subs.map((m,i)=>memberCard(m,i)).join("") : '<div class="roster-empty">No substitute added yet.</div>';
-        managementGrid.innerHTML = staff.length ? staff.map((m,i)=>memberCard(m,i)).join("") : '<div class="roster-empty">Management details have not been added yet.</div>';
-        document.querySelectorAll("#roster .roster-note").forEach(el => el.classList.add("admin-hidden"));
-        document.querySelectorAll("#roster .roster-group-label")[0].innerHTML = 'Starting lineup <span>' + String(players.length).padStart(2,"0") + ' MEMBERS</span>';
-      }
-      if ("IntersectionObserver" in window) {
-        document.querySelectorAll("#roster .reveal, #management .reveal").forEach(el => el.classList.add("visible"));
-      }
-    }
-    async function fetchMembers(publicOnly = true) {
-      if (!hxrSupabase) return [];
-      const { data, error } = await hxrSupabase.from("team_members").select("*").order("sort_order", { ascending: true }).order("created_at", { ascending: true });
-      if (error) { if (!publicOnly) setAdminStatus("Could not load members: " + error.message, "error"); return []; }
-      cachedMembers = data || [];
-      renderPublicRoster(cachedMembers);
-      if (!publicOnly) renderAdminList(cachedMembers);
-      return cachedMembers;
-    }
-    async function restoreAdminSession() {
-      if (!hxrSupabase) return;
-      const { data } = await hxrSupabase.auth.getSession();
-      activeSession = data.session;
-      if (activeSession && activeSession.user.id === HXR_ADMIN_UID) {
-        adminLoginForm.classList.add("admin-hidden");
-        adminWorkspace.classList.remove("admin-hidden");
-        setAdminStatus("Logged in as HXR admin.", "success");
-        await fetchMembers(false);
-      } else {
-        if (activeSession) await hxrSupabase.auth.signOut();
-        activeSession = null;
-        adminLoginForm.classList.remove("admin-hidden");
-        adminWorkspace.classList.add("admin-hidden");
-      }
-    }
-    adminLoginForm.addEventListener("submit", async event => {
-      event.preventDefault();
-      if (!hxrSupabase) { openAdminPanel(); return; }
-      setAdminStatus("Logging in…");
-      const email = document.getElementById("adminEmail").value.trim();
-      const password = document.getElementById("adminPassword").value;
-      const { data, error } = await hxrSupabase.auth.signInWithPassword({ email, password });
-      if (error) { setAdminStatus("Login failed: " + error.message, "error"); return; }
-      if (data.user.id !== HXR_ADMIN_UID) {
-        await hxrSupabase.auth.signOut();
-        setAdminStatus("This account is not authorized as the HXR admin.", "error");
-        return;
-      }
-      activeSession = data.session;
-      adminLoginForm.classList.add("admin-hidden");
-      adminWorkspace.classList.remove("admin-hidden");
-      setAdminStatus("Login successful.", "success");
-      await fetchMembers(false);
-    });
-    function clearMemberForm() {
-      memberForm.reset();
-      document.getElementById("memberId").value = "";
-      document.getElementById("oldScreenshotUrl").value = "";
-      document.getElementById("editorHeading").textContent = "Add team member";
-      document.getElementById("saveMemberBtn").textContent = "Save member";
-    }
-    document.getElementById("newMemberBtn").addEventListener("click", clearMemberForm);
-    document.getElementById("cancelEditBtn").addEventListener("click", clearMemberForm);
-    document.getElementById("refreshMembersBtn").addEventListener("click", () => fetchMembers(false));
-    function renderAdminList(members) {
-      if (!members.length) { adminMemberList.innerHTML = '<div class="roster-empty">No members yet. Use the form above to add the first member.</div>'; return; }
-      adminMemberList.innerHTML = members.map(m => '<div class="admin-member"><div><strong>' + escapeHTML(m.name) + ' <span style="color:var(--accent)">/ ' + escapeHTML(m.role) + '</span></strong><small>' + escapeHTML(m.ign || 'IGN not set') + ' · UID ' + escapeHTML(m.bgmi_uid || 'not set') + ' · ' + escapeHTML(m.level || 'Level not set') + ' · Rank ' + escapeHTML(m.rank || 'not set') + '</small></div><div class="admin-member-actions"><button class="admin-btn" type="button" data-edit="' + escapeHTML(m.id) + '">Edit</button><button class="admin-btn danger" type="button" data-delete="' + escapeHTML(m.id) + '">Remove</button></div></div>').join("");
-    }
-    adminMemberList.addEventListener("click", async event => {
-      const editButton = event.target.closest("[data-edit]");
-      const deleteButton = event.target.closest("[data-delete]");
-      if (editButton) {
-        const m = cachedMembers.find(item => String(item.id) === editButton.dataset.edit);
-        if (!m) return;
-        document.getElementById("memberId").value = m.id;
-        document.getElementById("oldScreenshotUrl").value = m.screenshot_url || "";
-        document.getElementById("memberName").value = m.name || "";
-        document.getElementById("memberRole").value = m.role;
-        document.getElementById("memberIgn").value = m.ign || "";
-        document.getElementById("memberBgmiUid").value = m.bgmi_uid || "";
-        document.getElementById("memberLevel").value = m.level || "";
-        document.getElementById("memberRank").value = m.rank || "";
-        document.getElementById("editorHeading").textContent = "Edit team member";
-        document.getElementById("saveMemberBtn").textContent = "Update member";
-        memberForm.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-      if (deleteButton) {
-        const m = cachedMembers.find(item => String(item.id) === deleteButton.dataset.delete);
-        if (!m || !confirm('Remove ' + m.name + ' from the HXR roster?')) return;
-        setAdminStatus("Removing member…");
-        const { error } = await hxrSupabase.from("team_members").delete().eq("id", m.id);
-        if (error) { setAdminStatus("Remove failed: " + error.message, "error"); return; }
-        if (m.screenshot_url) {
-          const marker = "/storage/v1/object/public/" + HXR_BUCKET + "/";
-          const pos = m.screenshot_url.indexOf(marker);
-          if (pos >= 0) { const path = decodeURIComponent(m.screenshot_url.slice(pos + marker.length)); await hxrSupabase.storage.from(HXR_BUCKET).remove([path]); }
-        }
-        clearMemberForm();
-        setAdminStatus("Member removed.", "success");
-        await fetchMembers(false);
-      }
-    });
-    memberForm.addEventListener("submit", async event => {
-      event.preventDefault();
-      if (!activeSession || activeSession.user.id !== HXR_ADMIN_UID) { setAdminStatus("Please log in with the HXR admin account first.", "error"); return; }
-      const saveButton = document.getElementById("saveMemberBtn");
-      saveButton.disabled = true;
-      setAdminStatus("Saving member details…");
+    async function loadArenaRoster(){
+      const cards = [...document.querySelectorAll(".player-card")];
       try {
-        const id = document.getElementById("memberId").value;
-        let screenshotUrl = document.getElementById("oldScreenshotUrl").value;
-        const file = document.getElementById("memberScreenshot").files[0];
-        if (file) {
-          if (!/^image\/(jpeg|png|webp)$/.test(file.type)) throw new Error("Choose a JPG, PNG or WebP image.");
-          if (file.size > 5 * 1024 * 1024) throw new Error("Image must be 5 MB or smaller.");
-          const safeName = file.name.toLowerCase().replace(/[^a-z0-9._-]+/g,"-");
-          const path = HXR_ADMIN_UID + "/" + Date.now() + "-" + safeName;
-          const { error: uploadError } = await hxrSupabase.storage.from(HXR_BUCKET).upload(path, file, { upsert: false, contentType: file.type });
-          if (uploadError) throw uploadError;
-          screenshotUrl = hxrSupabase.storage.from(HXR_BUCKET).getPublicUrl(path).data.publicUrl;
-        }
-        const record = {
-          name: document.getElementById("memberName").value.trim(),
-          role: document.getElementById("memberRole").value,
-          ign: document.getElementById("memberIgn").value.trim(),
-          bgmi_uid: document.getElementById("memberBgmiUid").value.trim(),
-          level: document.getElementById("memberLevel").value.trim(),
-          rank: document.getElementById("memberRank").value.trim(),
-          screenshot_url: screenshotUrl,
-          sort_order: Number(document.getElementById("memberRole").selectedIndex)
-        };
-        const result = id
-          ? await hxrSupabase.from("team_members").update(record).eq("id", id).select().single()
-          : await hxrSupabase.from("team_members").insert(record).select().single();
-        if (result.error) throw result.error;
-        const oldUrl = document.getElementById("oldScreenshotUrl").value;
-        if (file && oldUrl && oldUrl !== screenshotUrl) {
-          const marker = "/storage/v1/object/public/" + HXR_BUCKET + "/";
-          const pos = oldUrl.indexOf(marker);
-          if (pos >= 0) { const oldPath = decodeURIComponent(oldUrl.slice(pos + marker.length)); await hxrSupabase.storage.from(HXR_BUCKET).remove([oldPath]); }
-        }
-        clearMemberForm();
-        setAdminStatus("Saved! The public HXR roster is updated.", "success");
-        await fetchMembers(false);
-      } catch (error) {
-        setAdminStatus("Save failed: " + (error.message || "Unknown error"), "error");
-      } finally { saveButton.disabled = false; }
-    });
-    document.getElementById("logoutAdminBtn").addEventListener("click", async () => {
-      if (hxrSupabase) await hxrSupabase.auth.signOut();
-      activeSession = null;
-      adminLoginForm.reset();
-      adminLoginForm.classList.remove("admin-hidden");
-      adminWorkspace.classList.add("admin-hidden");
-      clearMemberForm();
-      setAdminStatus("You have been logged out.");
-    });
-    // Public visitors can read roster data; writes remain protected by database/storage RLS.
-    if (HXR_SUPABASE_PUBLISHABLE_KEY !== "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE" && window.supabase) {
-      hxrSupabase = window.supabase.createClient(HXR_SUPABASE_URL, HXR_SUPABASE_PUBLISHABLE_KEY);
-      fetchMembers(true);
+        const db = window.supabase.createClient(HXR_SUPABASE_URL, HXR_SUPABASE_PUBLISHABLE_KEY);
+        const {data,error} = await db.from("team_members").select("*").order("sort_order",{ascending:true}).order("created_at",{ascending:true});
+        if(error) throw error;
+        if(!Array.isArray(data)||!data.length) return;
+        const grid = document.querySelector(".roster-grid"); if(!grid) return;
+        grid.innerHTML = data.map((m,i)=>{
+          const name = safeText(m.player_name || m.name || m.ign || `HXR Player ${i+1}`);
+          const ign = safeText(m.ign || m.in_game_name || name);
+          const role = safeText(m.role || "Player");
+          const level = safeText(m.level || "Not added");
+          const shot = m.screenshot_url ? `<img class="database-photo" src="${safeAttr(m.screenshot_url)}" alt="${ign} player screenshot" loading="lazy">` : `<div class="screenshot-slot"><b>HXR</b><small>PLAYER PROFILE</small></div>`;
+          return `<article class="player-card reveal visible" data-number="${String(i+1).padStart(2,'0')}"><div class="player-top"><span class="player-role">${role}</span><span class="player-symbol">${String(i+1).padStart(2,'0')}</span></div><div class="player-silhouette">HXR</div><h3 class="player-name">${name}</h3><div class="profile-details"><div class="detail-row"><span>IGN</span><strong>${ign}</strong></div><div class="detail-row"><span>Level</span><strong>${level}</strong></div></div>${shot}</article>`;
+        }).join("");
+      } catch(err) { console.info("Arena roster fallback shown; public roster could not be loaded.",err); }
     }
-  </script>
+    function safeText(v){return String(v??"").replace(/[&<>\"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;","'":"&#39;"}[c]));}
+    function safeAttr(v){return safeText(v).replace(/`/g,"&#96;");}
+    loadArenaRoster();
+</script>
 </body>
 </html>
